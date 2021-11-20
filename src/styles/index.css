@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dosis:wght@200&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+body {
+    margin: 0;
+}
+
+#header-container {
+    background-color: #752020;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    display: flex;
+    -webkit-display: flex;
+}
+
+#header-container img {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 85%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+
+#navigation-menu {
+    overflow: hidden;
+    background-color: #752020;
+}
+
+#navigation-menu a {
+    user-select: none;
+    font-family: 'Comfortaa', cursive;
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    height: 100%;
+    line-height: 90px;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: ease-in 100ms;
+}
+
+#navigation-menu a:hover {
+    background-color: #8a3131;
+}
+
+#navigation-menu a:active {
+    background-color: #5e1919;
+}
+
+#navigation-menu a.active {
+    background-color: #5e1919;
+    color: white;
+}
