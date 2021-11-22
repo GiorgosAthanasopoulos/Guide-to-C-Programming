@@ -73,7 +73,7 @@ body {
   padding-left: 5vw;
 }
 
-#get-started h2 {
+.panel-heading {
   margin: 0;
   color: white; 
   font-family: 'Roboto', sans-serif;
@@ -82,7 +82,7 @@ body {
   text-shadow: 1px 1px 20px black;
 }
 
-#get-started p {
+.description-text {
   font-family: 'Roboto', sans-serif;
   color: white;
   text-shadow: 2px 2px 5px black;
@@ -117,6 +117,18 @@ body {
 
 .start-button:active {
   background-color: gray;
+}
+
+#should-learn {
+  height: 25vw;
+  text-align: right;
+  padding-top: 5vw;
+  padding-left: 5vw;
+  background-image: linear-gradient(to right, rgb(3, 64, 139), rgb(0, 29, 69))
+}
+
+#should-learn h2 {
+  margin-right: 5vw;
 }
 
 footer {
