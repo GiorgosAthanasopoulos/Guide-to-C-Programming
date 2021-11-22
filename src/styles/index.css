@@ -146,6 +146,15 @@ footer tr a {
   text-decoration: none;
   color: gray;
   font-family: "Segoe UI", sans-serif;
+  transition: ease-in 50ms;
+}
+
+footer tr a:hover {
+  color: lightgray;
+}
+
+footer tr a:active {
+  color: darkgray;
 }
 
 footer h5 {
