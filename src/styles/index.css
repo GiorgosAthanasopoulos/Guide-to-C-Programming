@@ -1,56 +1,156 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Dosis:wght@200&family=Roboto:ital,wght@0,400;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
+  height: 100%;
+  background-image: url('https://www.itl.cat/pngfile/big/210-2101051_dark-web-scanning-background-image-for-website-of.jpg');
+  background-size: contain;
 }
 
 #header-container {
-  background-color: #752020;
-  width: 100vw;
-  height: 10vh;
-  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 110vw;
+  display: table-cell;
+  z-index: 100;
 }
 
 #header-container img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   position: relative;
-  margin: 0;
+  margin-left: 100px;
+  margin-right: 10px;
   padding: 0;
-  height: 85%;
-  margin-left: 5%;
-  margin-right: 5%;
+  height: 50px;
   margin-top: 5px;
   float: left;
 }
 
-#navigation-menu {
-  overflow: hidden;
-  background-color: #752020;
-}
-
 #navigation-menu a {
+  text-shadow: 2px 2px 3px black;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  color: white;
   font-family: "Comfortaa", cursive;
   float: left;
-  color: white;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  height: 100%;
-  line-height: 90px;
+  line-height: 60px;
   padding-left: 2vw;
   padding-right: 2vw;
   transition: ease-in 100ms;
 }
 
 #navigation-menu a:hover {
-  background-color: #8a3131;
+  text-shadow: 0px 0px 8px white;
+  background-color: rgba(100, 100, 100, 0.4);
 }
 
 #navigation-menu a:active {
-  background-color: #5e1919;
+  background-color: rgba(100, 100, 100, 0.3);
 }
 
 #navigation-menu a.active {
-  background-color: #5e1919;
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
+#get-started {
+  box-shadow: 0px 0.3vw 8px black inset;
+  height: 25vw;
+  background-image: url('http://cmse2t27.esquarecart.com/image/journal/article?img_id=1684045&t=1554976929732');
+  background-size: cover;
+  padding-top: 5vw;
+  padding-left: 5vw;
+}
+
+#get-started h2 {
+  margin: 0;
+  color: white; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-size: 4vw;
+  text-shadow: 1px 1px 20px black;
+}
+
+#get-started p {
+  font-family: 'Roboto', sans-serif;
   color: white;
+  text-shadow: 2px 2px 5px black;
+  font-size: 1.4vw;
+  text-align: justify;
+  margin-right: 5vw;
+  margin-bottom: 2vw;
+}
+
+.start-button {
+  text-align: center;
+  background-color: rgb(253, 247, 239);
+  border-radius: 1.9vw;
+  font-size: 1.2vw;
+  padding: 0.5vw;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  text-decoration: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  transition: ease-in 150ms;
+  box-shadow: 1px 1px 1vw 0px black;
+}
+
+.start-button:hover{
+  background-color: lightgray;
+}
+
+.start-button:active {
+  background-color: gray;
+}
+
+footer {
+  background-color: #282d32;
+  padding: 6vw;
+  text-align: center;
+  padding-top: 2vw;
+  height: 100%;
+}
+
+footer th {
+  color: white;
+  line-height: 5vw;
+  font-size: 1.3vw;
+  text-shadow: 0px 0px 5px black;
+  min-width: 28.5vw;
+  font-family: "Segoe UI", sans-serif;
+}
+
+footer tr {
+  text-align: center;
+  font-size: 1.0vw;
+}
+
+footer tr a {
+  text-shadow: 0px 0px 5px black;
+  text-decoration: none;
+  color: gray;
+  font-family: "Segoe UI", sans-serif;
+}
+
+footer h5 {
+  margin-top: 4vw;
+  color: rgba(100, 100, 100, 0.5);
+  font-size: 1vw; 
+  font-family: "Segoe UI", sans-serif;
 }
