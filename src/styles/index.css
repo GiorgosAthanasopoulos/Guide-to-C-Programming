@@ -8,8 +8,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-image: url('https://www.itl.cat/pngfile/big/210-2101051_dark-web-scanning-background-image-for-website-of.jpg');
-  background-size: cover;
 }
 
 #header-container {
@@ -17,6 +15,8 @@ body {
   width: 110vw;
   display: table-cell;
   z-index: 100;
+  background-image: url(../images/index/navigation_background.jpg);
+  background-size: cover;
 }
 
 #header-container img {
@@ -66,8 +66,8 @@ body {
 
 #get-started {
   box-shadow: 0px 0.3vw 8px black inset;
-  height: 25vw;
-  background-image: url('http://cmse2t27.esquarecart.com/image/journal/article?img_id=1684045&t=1554976929732');
+  height: 24vw;
+  background-image: url(../images/index/first_panel.jpg);
   background-size: cover;
   padding-top: 5vw;
   padding-left: 5vw;
@@ -89,7 +89,7 @@ body {
   font-size: 1.4vw;
   text-align: justify;
   margin-right: 5vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 
 .start-button {
@@ -120,6 +120,7 @@ body {
 }
 
 #should-learn {
+  box-shadow: -0px -0.3vw 8px black;
   height: 25vw;
   text-align: right;
   padding-top: 5vw;
