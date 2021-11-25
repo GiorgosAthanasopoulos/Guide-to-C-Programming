@@ -17,7 +17,7 @@ footer {
     background-color: black;
     font-family: 'Roboto', sans-serif;
     color: white;
-    background-image: url('https://images.freecreatives.com/wp-content/uploads/2016/04/Website-Backgrounds-For-Desktop.jpg');
+    background-image: url(../images/references/background.jpg);
     background-size: cover;
 }
 
