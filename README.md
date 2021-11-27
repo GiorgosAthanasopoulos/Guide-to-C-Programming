@@ -1,3 +1,3 @@
 # Guide-to-C-Programming
 
-Test 
+Website to introduct programmers to the c programming language.
