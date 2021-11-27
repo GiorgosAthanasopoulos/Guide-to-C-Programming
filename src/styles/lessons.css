@@ -1,33 +1,45 @@
 #lesson-wrapper {
-  height: 100%;
   width: 100%;
   margin: 0;
   overflow: hidden;
   box-shadow: 0px 1px 0.3vw black inset;
+  display: grid;
+  grid-template-areas:
+    "menu main main main main main"
+    "menu main main main main main";
 }
 
 #lesson-sidebar {
-  width: 230px;
   padding-bottom: 20px;
   padding-top: 5px;
   font-family: "Segoe UI", sans-serif;
   background-color: lightgray;
-  float: left;
-  height: 100%;
   box-shadow: 0px 0px 0.3vw black;
+  max-width: fit-content;
+  grid-area: menu;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(155, 0, 155, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../images/references/background.jpg);
+  box-shadow: 0px 3px 8px black inset;
+  background-size: cover;
 }
 
 #lesson-area {
-  float: left;
-  overflow: hidden;
+  color: black;
+  background-color: white;
+  grid-area: main;
+  padding: 50px;
 }
 
 #lesson-sidebar a {
   display: flex;
   text-decoration: none;
   padding: 3px 3px 3px 15px;
-  text-align: center;
-  color: black;
+  text-align: left;
+  color: white;
 }
 
 #lesson-sidebar a:hover {
@@ -42,4 +54,5 @@
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  color: white;
 }

@@ -94,6 +94,13 @@ body {
   animation-fill-mode: forwards;
 }
 
+#should-learn li {
+  margin-bottom: 2vw;
+  margin-right: 5vw;
+  text-align: justify;
+  color: white;
+}
+
 .panel-heading {
   margin: 0;
   color: white;
@@ -141,7 +148,7 @@ body {
 
 #should-learn {
   box-shadow: -0px -0.3vw 8px black;
-  height: 25vw;
+  height: 63vw;
   text-align: left;
   padding-top: 5vw;
   padding-left: 5vw;
@@ -202,4 +209,8 @@ footer h5 {
   color: rgba(100, 100, 100, 0.5);
   font-size: 1vw;
   font-family: "Segoe UI", sans-serif;
+}
+
+#subtitle-adv {
+  color: white;
 }
