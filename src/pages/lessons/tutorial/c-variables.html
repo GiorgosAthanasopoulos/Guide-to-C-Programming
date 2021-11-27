@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../../../styles/lessons.css" />
     <title>C Μεταβλητές</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -29,14 +29,14 @@
         <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
         <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
         <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
-        <a href="../../lessons/tutorial/c-comments.html">C Μεταβλητές</a>
+        <a class="current-page" href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
         <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
         <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
         <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
         <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
         <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
         <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
-        <a href="../../lessons/tutorial/c-booleans.html">C Συνθήκες</a>
+        <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
         <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
         <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
         <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
@@ -59,8 +59,59 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1> Μεταβλητές </h1>
+        <hr>
+        <p> 
+          Οι μεταβλητές είναι ένας τρόπος αν αναφερόμαστε σε μία θέση μνήμης
+          με ένα όνομα, στην οποία μπορούμε να αποθηκεύουμε διαφορετικών
+          τύπων δεδομένα. Στην γλώσσα προγραμματισμού C υπάρχουν μερικοί τύποι
+          δεδομένων οι οποίοι της είναι εγγενείς. Όπως θα δούμε αργότερα, μπορούμε
+          ως προγραμματιστές να ορίσουμε και δικούς μας τύπους.
+          <br><br>
+          Οι πιό βασικοί εγγενείς τύποι δεδομένων είναι οι εξής:
+        </p>
+        <ul>
+          <li>char - Ένας χαρακτήρας ο οποίος ανήκει στο <a href="https://www.asciitable.com/">ASCII</a></li>
+          <li>int - Ένας ακέραιος αριθμός</li>
+          <li>float - Ένας δεκαδικός αριθμός (αριθμός κινητής υποδιαστολής)</li>
+          <li>double - Ένας δεκαδικός αριθμός με διπλάσια ακρίβεια απ'τον float</li>
+        </ul>
+        <p> 
+          Όπως θα δούμε παρακάτω υπάρχουν μερικές παραλλαγές τις οποίες μπορούμε
+          να εφαρμόσουμε στους παραπάνω τύπους, καθώς και ένας επιπλέον τύπος (void)
+          ο οποίος χρησιμοποιείται σε λίγο διαφορετικές περιπτώσεις.
+        </p>
+        <hr>
+        <h2>Χρήση μεταβλητών</h2>
+        <p> 
+          Για να χρησιμοποιήσουμε μία μεταβλητή στην C, πρέπει πρώτα από όλα να την
+          δηλώσουμε. Τι σημαίνει αυτό; Σημαίνει οτι πρέπει να δηλώσουμε οτι υπάρχει μία μεταβλητή
+          με ένα συγκεκριμένο όνομα ενός συγκεκριμένου τύπου. Πιο συγκεκριμένα:
+        </p>
+        <pre class="prettyprint" style="width: 130px;"><i>type</i> name = <i>value;</i></pre>
+        <p>
+        Όπου type είναι ένας από τους παραπάνω τύπους (π.χ. int) και value είναι
+        μία τιμή η οποία αρμόζει στον εν λόγω τύπο (π.χ. η αριθμητική τιμή 4 όταν
+        πρόκειται για μεταβλητή int). Να σημειωθεί οτι δεν είναι απαραίτητο να 
+        αναθέσουμε μία τιμή σε μία μεταβλητή με το που την δηλώσουμε, όμως γενικά
+        συνιστάται.
+        <br><br>
+        Μπορούμε να αναθέσουμε τιμές σε μεταβλητές εγγενών τύπων ως εξής:
+        </p>
+        <pre class="prettyprint">int i = 5;
+char c = 'a'; /* Είναι σημαντικό στους χαρακτήρες να χρησιμοποιούμε μονά εισαγωγικά (') και όχι διπλά (") */
+float f = 5.4f;
+double d = 1.2;</pre>
+        <p>
+          Μπορούμε επίσης να χρησιμοποιούμε μεταβλητές και ως μέρος μίας έκφρασης,
+          (π.χ. αριθμητικής παράστασης) την οποία να αναθέσουμε σε μία άλλη μεταβλητή:
+        </p>
+        <pre class="prettyprint">int x = 5;
+int y = 3;
+int z = x + y; /* Το z θα έχει την τιμή 8 */</pre>
+      <hr>
+      <a class="previous-button" href="c-comments.html"><span>Previous</span></a>
+      <a class="next-button" href="c-user-input.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
