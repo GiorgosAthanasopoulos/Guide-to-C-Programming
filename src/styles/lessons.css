@@ -1,5 +1,5 @@
 h1 h2 h3 h4 h5 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #lesson-wrapper {
@@ -9,10 +9,10 @@ h1 h2 h3 h4 h5 h6 {
   box-shadow: 0px 1px 0.3vw black inset;
   display: grid;
   grid-template-areas:
-    'menu main main main main main'
-    'menu main main main main main';
+    "menu main main main main main"
+    "menu main main main main main";
   background-image: url(../images/references/background.jpg);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -39,7 +39,7 @@ h1 h2 h3 h4 h5 h6 {
   background-color: rgba(10, 10, 10, 0.95);
   box-shadow: -4px 3px 8px black inset;
   color: white;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   text-align: justify;
 }
 
@@ -75,7 +75,7 @@ hr {
 .next-button {
   background-color: white;
   color: black;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -100,7 +100,7 @@ hr {
 }
 
 .next-button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -126,7 +126,7 @@ hr {
 }
 
 .next-button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
