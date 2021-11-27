@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Dosis:wght@200&family=Roboto:ital,wght@0,400;1,300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 html {
   height: 100%;
@@ -82,12 +82,12 @@ body {
   padding-left: 5vw;
 }
 
-#get-started h2, 
+#get-started h2,
 #get-started p,
-#get-started a, 
+#get-started a,
 #should-learn h2,
 #should-learn p,
-#should-learn a{
+#should-learn a {
   animation: fade-in-animation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -95,14 +95,14 @@ body {
 
 .panel-heading {
   margin: 0;
-  color: white; 
-  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-family: "Roboto", sans-serif;
   font-size: 4vw;
   text-shadow: 1px 1px 20px black;
 }
 
 .description-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   text-shadow: 2px 2px 5px black;
   font-size: 1.4vw;
@@ -125,12 +125,12 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: ease-in 150ms;
   box-shadow: 1px 1px 1vw 0px black;
 }
 
-.start-button:hover{
+.start-button:hover {
   background-color: lightgray;
 }
 
@@ -144,7 +144,7 @@ body {
   text-align: right;
   padding-top: 5vw;
   padding-left: 5vw;
-  background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(5, 4, 4))
+  background-image: linear-gradient(to right, rgb(37, 37, 37), rgb(5, 4, 4));
 }
 
 #should-learn h2 {
@@ -170,7 +170,7 @@ footer th {
 
 footer tr {
   text-align: center;
-  font-size: 1.0vw;
+  font-size: 1vw;
 }
 
 footer tr a {
@@ -192,6 +192,6 @@ footer tr a:active {
 footer h5 {
   margin-top: 4vw;
   color: rgba(100, 100, 100, 0.5);
-  font-size: 1vw; 
+  font-size: 1vw;
   font-family: "Segoe UI", sans-serif;
 }
