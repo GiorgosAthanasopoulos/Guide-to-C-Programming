@@ -1,3 +1,7 @@
+h1 h2 h3 h4 h5 h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
 #lesson-wrapper {
   width: 100%;
   margin: 0;
@@ -5,8 +9,11 @@
   box-shadow: 0px 1px 0.3vw black inset;
   display: grid;
   grid-template-areas:
-    "menu main main main main main"
-    "menu main main main main main";
+    'menu main main main main main'
+    'menu main main main main main';
+  background-image: url(../images/references/background.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 
 #lesson-sidebar {
@@ -17,14 +24,10 @@
   box-shadow: 0px 0px 0.3vw black;
   max-width: fit-content;
   grid-area: menu;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(155, 0, 155, 0.5),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url(../images/references/background.jpg);
-  box-shadow: 0px 3px 8px black inset;
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 1px 0px 0px white;
   background-size: cover;
+  min-width: 230px;
 }
 
 #lesson-area {
@@ -32,18 +35,29 @@
   background-color: white;
   grid-area: main;
   padding: 50px;
+  background-color: rgba(10, 10, 10, 0.95);
+  box-shadow: -4px 3px 8px black inset;
+  color: white;
+  font-family: 'Segoe UI';
+  text-align: justify;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #222;
 }
 
 #lesson-sidebar a {
   display: flex;
   text-decoration: none;
   padding: 3px 3px 3px 15px;
-  text-align: left;
   color: white;
+  text-align: left;
+  transition: ease-in 10ms;
 }
 
 #lesson-sidebar a:hover {
-  background-color: rgb(185, 185, 185);
+  background-color: rgba(255, 255, 255, 0.267);
 }
 
 #lesson-sidebar h2 {
@@ -54,5 +68,77 @@
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid rgb(0, 0, 0, 0.2);
-  color: white;
+}
+
+.previous-button,
+.next-button {
+  background-color: white;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  transition: ease-in 0.1s;
+  margin-top: 30px;
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.next-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.previous-button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.next-button:hover span {
+  padding-right: 25px;
 }
