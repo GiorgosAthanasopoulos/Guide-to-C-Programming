@@ -7,65 +7,9 @@
     <title>Ασκήσεις σε Μεταβλητές</title>
     <link rel="stylesheet" href="../../styles/index.css" />
     <link rel="stylesheet" href="../../styles/exercises.css" />
-    <style>
-      #submit-answer-button-1 {
-        background-color: #059862;
-
-        color: ffffe5;
-        font-size: 20px;
-        border-radius: 20px;
-        border: none;
-        display: inline-block;
-
-        padding: 10px;
-        padding-right: 35px;
-        padding-left: 35px;
-      }
-
-      #show-answer-button-1 {
-        float: right;
-        text-align: left;
-        background-color: #282a35;
-
-        color: #ffffe5;
-        font-size: 20px;
-        border-radius: 20px;
-        border: none;
-
-        margin-top: -58px;
-        margin-right: 10px;
-        padding: 10px;
-
-        padding-right: 25px;
-        padding-left: 25px;
-      }
-
-      hr {
-        margin-top: 50px;
-      }
-
-      input {
-        font-family: Courier;
-      }
-
-      #pre-exc-1 {
-        padding-bottom: 10px;
-      }
-
-      #pre-exc-3 {
-        background-color: #333333;
-        padding: 10px;
-        font-size: 12px;
-      }
-
-      a {
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
-
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -114,12 +58,19 @@
         </pre>
         <button
           id="show-answer-button-1"
+          class="show-answer-button"
+          style="margin-top: -58px;
+                 margin-right: 10px;
+                 padding: 10px;  
+                 padding-right: 25px;
+                 padding-left: 25px;"
           onclick="show_answer_button_1_clicked();"
         >
           Show Answer
         </button>
         <button
           id="submit-answer-button-1"
+          class="submit-button"
           onclick="submit_answer_button_1_clicked();"
         >
           Submit Answer ❯

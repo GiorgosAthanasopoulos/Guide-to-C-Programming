@@ -97,3 +97,65 @@ hr {
   padding-top: 10px;
   border-bottom: 1px solid rgb(0, 0, 0, 0.2);
 }
+
+.submit-button {
+  background-color: #059862;
+
+  color: ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.submit-button:hover {
+  background-color: #05794e;
+}
+
+.show-answer-button {
+  float: right;
+  text-align: left;
+  background-color: #282a35;
+  cursor: pointer;
+  color: #ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+
+  margin-top: -70px;
+  margin-right: 10px;
+  padding: 10px;
+
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.show-answer-button:hover {
+  background-color: #1e1f27;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+input {
+  font-family: Courier;
+}
+
+#pre-exc-1 {
+  padding-bottom: 10px;
+}
+
+#pre-exc-3 {
+  background-color: #333333;
+  padding: 10px;
+  font-size: 12px;
+}
+
+a {
+  cursor: pointer;
+}
