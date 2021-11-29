@@ -11,10 +11,6 @@ window.onload = function() {
     }
 }
 
-function setNextPageAs(next_page) {
-    nextPage = next_page;
-}
-
 // First arguement: id of the <pre> element containing the code
 // Second arguement: an array of boolean values indicating whether the current 'show' button is clicked
 // Third arguement: an array that contains arrays of the answers to each exercise in the correct order (e.g. [ [+, -], ["scanf", "%d"] ])
