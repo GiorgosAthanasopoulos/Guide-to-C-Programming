@@ -10,7 +10,7 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
-    <script src="../../scripts/exercises.js"> </script>
+    <script src="../../scripts/exercises.js"></script>
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -52,13 +52,12 @@
         <script> var answers = [ ['+'] ];</script>
         <pre class="prettyprint" id="first-exc-1">
           
-  printf("%d", 5 <input id="operator-exc-1" class="excercise" type="text" size="1" maxlength="1"> 10)
+  printf("%d", 5 <input class="excercise" type="text" size="1" maxlength="1"> 10)
         </pre>
         <button class="show-answer-button"
-                id="show-answer-button-1"
                 style="margin-top: -60.5px;"
                 onclick="onShowAnswer('first-exc-1', answers)">Show Answer</button>
-        <button class="submit-button" id="submit-answer-button-1">
+        <button class="submit-button" onclick="onSubmitAnswer('first-exc-1', answers, 'c-strings.html')">
           Submit Answer ❯
         </button>
       </div>
@@ -90,8 +89,5 @@
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
     </footer>
-    <script>
-      
-    </script>
   </body>
 </html>
