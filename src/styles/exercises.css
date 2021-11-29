@@ -170,12 +170,12 @@ hr {
   background-color: #1e1f27;
 }
 
-hr {
-  margin-top: 50px;
-}
-
 input {
   font-family: Courier;
+}
+
+pre {
+  border-radius: 8px;
 }
 
 #pre-exc-1 {
