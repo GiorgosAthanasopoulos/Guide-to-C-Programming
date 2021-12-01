@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ασκήσεις σε Loops</title>
+    <link rel="stylesheet" href="../../styles/index.css" />
+    <link rel="stylesheet" href="../../styles/exercises.css" />
+    <link rel="shortcut icon" type="image/png" href="../../images/icon.png" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
+    <script src="../../scripts/exercises.js"></script>
+    <div id="header-container">
+      <a href="../../index.html"><img src="../../images/icon.png" /></a>
+      <span id="navigation-menu">
+        <a href="../../index.html"> Αρχική </a>
+        <a href="../lessons.html"> Μαθήματα </a>
+        <a href="../references.html"> Πηγές </a>
+        <a class="active" href="../exercises.html"> Ασκήσεις Εξάσκησης </a>
+        <a href="../contact.html"> Επικοινωνία </a>
+      </span>
+    </div>
+    <div id="excercise-wrapper">
+      <div id="excercise-sidebar">
+        <h2>C Ασκήσεις</h2>
+        <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
+        <a href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
+        <a href="c-user-input.html">Ασκήσεις σε Είσοδο</a>
+        <a href="c-data-types.html">Ασκήσεις σε Τύπους Δεδομένων</a>
+        <a href="c-operators.html">Ασκήσεις σε Τελεστές</a>
+        <a href="c-strings.html">Ασκήσεις σε Συμβολοσειρές</a>
+        <a href="c-math.html">Ασκήσεις σε Μαθηματικά</a>
+        <a href="c-booleans.html">Ασκήσεις σε Λογικές Τιμές</a>
+        <a href="c-if-else.html">Ασκήσεις σε If Else</a>
+        <a href="c-switch.html">Ασκήσεις σε Switch</a>
+        <a href="c-loops.html">Ασκήσεις σε Loops</a>
+        <a href="c-arrays.html">Ασκήσεις σε Πίνακες</a>
+        <a href="c-functions.html">Ασκήσεις σε Συναρτήσεις</a>
+        <a href="c-structs.html">Ασκήσεις σε Δομές</a>
+      </div>
+      <div id="excercise-area">
+        <script>
+          var answers = [
+            ['while', '+='],
+            ['do', '1', 'while'],
+            ['for', '++', 'Yes'],
+            ['break'],
+            ['continue']
+          ];
+        </script>
+        <h1>Ασκήσεις σε επαναλήψεις</h1>
+        <hr>
+        <p>Οι επαναλήψεις μπορεί να δυσκολεύουν πολλούς που προγραμματίζουν για πρώτη φορά, για αυτό
+          είναι σημαντικό να εξασκθηούμε σε αυτές ώστε να μπορούμε να φανταστούμε την ροή του προγράμματος
+          κατά την εκτέλεση επαναλήψεων έτσι ώστε να μπορούμε να τις συνθέτουμε
+          σωστά.
+        </p>
+        <hr>
+        <h3>Άσκηση 1</h3>
+        <p>Συμπληρώστε τα παρακάτω κενά έτσι ώστε να εκτυπώνονται οι ακέραιοι αριθμοί
+          από το 1 μέχρι το 5
+        </p>
+        <pre class="prettyprint" id="exc-1">
+
+  int i = 1;
+  <input class="exercise" maxlength="5" size="5"> (i &lt; 6) {
+    printf("%d\n", i);
+    i <input class="exercise" maxlength="2" size="2"> 1;
+  }
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -67.5px"
+          onclick="onShowAnswer('exc-1', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-1', answers)"
+        >
+          Submit Answer ❯
+        </button>
+        <hr>
+        <h3>Άσκηση 2</h3>
+        <p>Συμπληρώστε τα παρακάτω κενά έτσι ώστε να εκτυπώνονται όλοι 
+          οι ακέραιοι αριθμοί απο το 1 εώς το 6
+        </p>
+        <pre class="prettyprint" id="exc-2">
+
+  int i = 1;
+  <input class="exercise" maxlength="2" size="2"> {
+    printf("%d\n", i);
+    i += <input class="exercise" maxlength="1" size="1">;
+  } <input class="exercise" maxlength="5" size="5"> (i &lt; 6);
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -67.5px"
+          onclick="onShowAnswer('exc-2', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-2', answers)"
+        >
+          Submit Answer ❯
+        </button>
+        <hr>
+        <h3>Άσκηση 3</h3>
+        <p>Συμπληρώστε τα παρακάτω κενά έτσι ώστε να εμφανιστεί η λέξη 'Yes' 
+          5 φορές στην οθόνη.
+        </p>
+        <pre class="prettyprint" id="exc-3">
+  
+  <input class="exercise" maxlength="3" size="3"> (int i = 0; i &lt; 5; <input class="exercise" maxlength="2" size="2">i) {
+    puts("<input class="exercise" maxlength="3" size="3">");
+  }
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -67.5px"
+          onclick="onShowAnswer('exc-3', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-3', answers)"
+        >
+          Submit Answer ❯
+        </button>
+        <hr>
+        <h3>Άσκηση 4</h3>
+        <p> Συμπληρώστε το κενό έτσι ώστε η επανάληψη να διακόπτεται όταν το i αποκτά την τιμή 5 </p>
+        <pre class="prettyprint" id="exc-4">
+          
+  for (int i = 0; i &lt; 10; ++i) {
+    if (i == 5) {
+      <input class="exercise" maxlength="5" size="5">;
+    }
+    printf("%d\n", i);
+  }
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -67.5px"
+          onclick="onShowAnswer('exc-4', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-4', answers)"
+        >
+          Submit Answer ❯
+        </button>
+        <hr>
+        <h3>Άσκηση 5</h3>
+        <p>Συμπληρώστε το κενό έτσι ώστε να μην εκτυπωθεί η τιμή 4</p>
+        <pre class="prettyprint" id="exc-5">
+
+  for (int i = 0; i &lt; 10; ++i) {
+    if (i == 4) {
+      <input class="exercise" maxlength="8" size="8">;
+    }
+    printf("%d\n", i);
+  }
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -67.5px"
+          onclick="onShowAnswer('exc-5', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-5', answers, 'c-arrays.html')"
+        >
+          Submit Answer ❯
+        </button>
+        <hr>
+      </div>
+    </div>
+    <footer>
+      <table>
+        <tr>
+          <th>Υπηρεσίες</th>
+          <th>Σχετικά με εμάς</th>
+          <th>Ιστοσελίδα</th>
+        </tr>
+        <tr>
+          <td><a href="../lessons.html">Μαθήματα</a></td>
+          <td><a href="../contact.html">Ομάδα</a></td>
+          <td>
+            <a
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
+              target="_blank"
+              >GitHub</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><a href="../exercises.html">Ασκήσεις</a></td>
+          <td>
+            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
+          </td>
+        </tr>
+      </table>
+      <h5>&copy; Athens University of Economics and Business</h5>
+    </footer>
+  </body>
+</html>
