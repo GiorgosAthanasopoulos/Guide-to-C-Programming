@@ -2,4 +2,4 @@
 
 Website to introduct programmers to the c programming language.
 
-![alt text](/images/icon.png)
+![plot](./images/icon.png)
