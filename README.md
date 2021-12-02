@@ -1,3 +1,3 @@
 # Guide-to-C-Programming
 
-Website to introduct programmers to the c programming language.
+Website to introduct learners to the c programming language.
