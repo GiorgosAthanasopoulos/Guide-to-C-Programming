@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="image/png" href="../../images/icon.png" />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
+    <script src="../../scripts/exercises.js"></script>
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -39,8 +41,120 @@
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
       <div id="excercise-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h2>Ασκήσεις σε Πίνακες</h2>
+        <hr />
+        <h3>Άσκηση 1</h3>
+        <p>
+          Δημιουργήστε μια σειρά συμβολοσειρών τύπου που ονομάζεται cars.<br />!Υποθέστε
+          οτι το μέγιστο μήκος μιας συμβολοσειράς ειναι 10.
+        </p>
+        <script>
+          answers = [["char", "cars", "4", "10"]]
+        </script>
+        <pre class="prettyprint lang-c" id="exc-1" style="padding-top: 10px">
+          <input class="excercise" type="text" size="4" maxlength="4"> <input class="excercise" type="text" size="4" maxlength="4">[<input class="excercise" type="text" size="1" maxlength="1">][<input class="excercise" type="text" size="2" maxlength="2">] = {"Volvo", "BMW", "Ford", "Mazda"};
+
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -60.5px"
+          onclick="onShowAnswer('exc-1', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-1', answers, '#exc-2')"
+        >
+          Submit Answer ❯
+        </button>
+        <!-- EXC 2-->
+        <hr />
+        <h3>Άσκηση 2</h3>
+        <p>Εκτυπώστε την τιμή του δεύτερου στοιχείου στον πίνακα cars.</p>
+        <script>
+          answers = [
+            ["char", "cars", "4", "10"],
+            ["char", "cars", "cars[1]"],
+          ]
+        </script>
+        <pre class="prettyprint lang-c" id="exc-2" style="padding-top: 10px">
+        <input class="excercise" type="text" size="4" maxlength="4"> <input class="excercise" type="text" size="4" maxlength="4">[4][10] = {"Volvo", "BMW", "Ford", "Mazda"};
+        printf("%s", <input class="excericse" type="text" size="7" maxlength="7">);
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -60.5px"
+          onclick="onShowAnswer('exc-2', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-2', answers, '#exc-3')"
+        >
+          Submit Answer ❯
+        </button>
+        <!-- EXC 3-->
+        <hr />
+        <h3>Άσκηση 3</h3>
+        <p>Αλλάξτε την τιμή από "Volvo" σε "Opel", στον πίνακα cars.</p>
+        <script>
+          answers = [
+            ["char", "cars", "4", "10"],
+            ["char", "cars", "cars[1]"],
+            ["cars[0]", '"Opel"'],
+          ]
+        </script>
+        <pre class="prettyprint lang-c" id="exc-3" style="padding-top: 10px">
+        char cars[4][10] = {"Volvo", "BMW", "Ford", "Mazda"};
+        <input class="exercise" type="text" size="7" maxlength="7"> = <input class="excercise" type="text" size="6" maxlength="6">;
+        printf("%s", cars[0]);
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -60.5px"
+          onclick="onShowAnswer('exc-3', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-3', answers, '#exc-4')"
+        >
+          Submit Answer ❯
+        </button>
+        <!-- EXC 4-->
+        <hr />
+        <h3>Άσκηση 4</h3>
+        <p>Κάντε βρόχο μέσα από τα στοιχεία στoν πίνακα cars.</p>
+        <script>
+          answers = [
+            ["char", "cars", "4", "10"],
+            ["char", "cars", "cars[1]"],
+            ["cars[0]", '"Opel"'],
+            ["for", "int", "i", "i++", "cars[i]"],
+          ]
+        </script>
+        <pre class="prettyprint lang-c" id="exc-4" style="padding-top: 10px">
+        char cars[4][10] = {"Volvo", "BMW", "Ford", "Mazda"};
+        <input class="excercise" type="text" size="3" maxlength="3"> (<input class="excercise" type="text" size="3" maxlength="3"> = 0; <input class="excercise" type="text" size="1" maxlength="1"> &lt; 4; <input class="excercise" type="text" size="3" maxlength="3">) {
+          printf("%s\n", <input class="excercise" type="text" size="7" maxlength="7">)
+        }
+        </pre>
+        <button
+          class="show-answer-button"
+          style="margin-top: -60.5px"
+          onclick="onShowAnswer('exc-4', answers)"
+        >
+          Show Answer
+        </button>
+        <button
+          class="submit-button"
+          onclick="onSubmitAnswer('exc-4', answers, 'c-functions.html')"
+        >
+          Submit Answer ❯
+        </button>
       </div>
     </div>
     <footer>
