@@ -1,4 +1,4 @@
-# Guide-to-C-Programming
+# Guide to C Programming
 
 Website to introduct programmers to the c programming language.
 
