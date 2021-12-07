@@ -13,8 +13,8 @@
     />
     <title>C Σύνταξη</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -31,7 +31,7 @@
         <a href="../../lessons.html">C Αρχική</a>
         <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
         <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
-        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
+        <a class="current-page" href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
         <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
         <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
         <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
@@ -64,8 +64,40 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Σύνταξη</h1>
+        <hr>
+        <p> Παρακάτω παρουσιάζουμε ένα πολύ βασικό πρόγραμμα, την σύνταξη του οποίου
+          θα αναλύσουμε </p>
+        <pre class="prettyprint">
+
+          #include &lt;stdio.h&gt;
+
+          int main()
+          {
+            printf("Hello, world!");
+            return 0;
+          }
+        </pre>
+        <hr>
+        <h3>Επεξήγηση</h3>
+        <p><b>Γραμμή 1:</b> Χωρίς να εμβαθύνουμε πάρα πολύ με λεπτομέρειες, χρησιμοποιώντας στην 
+          κορυφή του αρχείου τον προεπεξεργαστή include μπορούμε να χρησιμοποιήσουμε βιβλιοθήκες
+          που είτε τις παρέχει η γλώσσα είτε κάποιο τρίτο πρόσωπο. Στην περίπτωσή μας, χρησιμοποιούμε
+          την βιβλιοθήκη stdio.h η οποία μας παρέχει τρόπους να εμφανίζουμε μηνύματα στην οθόνη και να διαβάζουμε
+          πληροφορίες που πληκτρολογεί ο χρήστης κτλ.
+        </p>
+        <p><b>Γραμμή 2:</b> Μία κενή γραμμή. Η C αγνοεί τις κενές γραμμές, που σημαίνει ότι
+          μπορούμε να αφήνουμε κενά ανάμεσα στον κώδικά μας ώστε να είναι πιο εύκολος ως πρός την ανάγνωση
+        </p>
+        <p><b>Γραμμή 3:</b> Σε κάθε πρόγραμμα υπάρχουν συναρτήσεις οι οποίες περιέχουν κώδικα
+        ανάμεσα σε αγκύλες {}. Η συνάρτηση main είναι η συνάρτηση στην οποία ξεκινάει η εκτέλεση του προγράμματος</p>
+        <p><b>Γραμμή 4:</b> Η κλήση της συνάρτησης printf (print format) με παράμετρο μία συμβολοσειρά η οποία
+        θα εμφανιστεί στην οθόνη</p>
+        <p><b>Γραμμή 5:</b> Η συνάρτηση επιστρέφει την τιμή 0, που για την συνάρτηση main σημαίνει οτι
+        όλα πήγαν καλά κατά την εκτέλεση του προγράμματος</p>
+        <hr>
+        <a class="previous-button" href="c-get-started.html"><span>Previous</span></a>
+        <a class="next-button" href="c-output.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +113,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

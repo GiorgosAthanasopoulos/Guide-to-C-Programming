@@ -13,8 +13,8 @@
     />
     <title>C Switch</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -42,7 +42,7 @@
         <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
         <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
         <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
-        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
+        <a class="current-page" href="../../lessons/tutorial/c-switch.html">C Switch</a>
         <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
         <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
         <a href="../../lessons/tutorial/c-break-continue.html"
@@ -64,8 +64,56 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Switch</h1>
+        <hr>
+          Η εντολή switch χρησιμοποιείται ώστε να επιλεχθεί ένα κομμάτι
+          κώδικα το οποίο θα εκτελεστεί βάσει την αποτίμιση μιάς έκφρασης.
+          Η σύγκριση γίνεται αυστηρά με σταθερές τιμές. Για παράδειγμα:
+          <pre class="prettyprint">
+
+  int x = 10;
+
+  switch (x)
+  {
+  case 5:
+    printf("5");
+    break;
+
+  case 10:
+    printf("10");
+    break;
+
+  default:
+    printf("Neither");
+    break;
+  }
+          </pre>
+          <p>
+            Ας αναλύσουμε το παραπάνω κομμάτι κώδικα. Αρχικά, γράφουμε switch και βάζουμε
+            την τιμή την οποία εξετάζουμε μέσα στην παρένθεση. Μετά, χρησιμοποιούμε την λέξη
+            case για την κάθε περίπτωση και την τιμή που αντιστοιχεί στην περίπτωση ακριβώς μετά.
+            Δείτε πως μετά απο κάθε κλήση της printf χρησιμοποιούμε την δεσμευμένη λέξη break. 
+            Αν δεν την χρησιμοποιούσαμε, τότε μετά την εκτέλεση της μίας περίπτωσης, η εκτέλεση
+            θα συνέχιζε μέχρι να συναντηθεί κάποιο άλλο break. Δηλαδή:
+            <pre class="prettyprint">
+
+  int x = 5;
+
+  switch (x)
+  {
+  case 5:
+    printf("5");
+
+  case 10:
+    printf("10");
+  }
+            </pre>
+            Αν εκτελέσετε αυτόν τον κώδικα, θα εμφανιστεί και ή τιμή 5 και η τιμή
+            10 στην οθόνη. Αυτές οι περιπτώσεις ονομάζονται fallthrough.
+          </p>
+        <hr>
+        <a class="previous-button" href="c-conditions.html"><span>Previous</span></a>
+        <a class="next-button" href="c-while-loop.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +129,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

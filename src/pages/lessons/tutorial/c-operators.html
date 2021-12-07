@@ -14,7 +14,6 @@
     <title>C Τελεστές</title>
   </head>
   <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -37,7 +36,7 @@
         <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
         <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
         <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
-        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
+        <a class="current-page" href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
         <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
         <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
         <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
@@ -64,8 +63,122 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Τελεστές</h1>
+        <p>Οι τελεστές χρησιμοποιούνται μεταξύ μεταβλητών και σταθερών προκειμένου να 
+          ολοκληρώσουμε υπολογισμούς.
+        </p>
+        <hr>
+        <h2>Αριθμιτικοί τελεστές</h2>
+        <p> 
+          Υπάρχουν τελεστές οι οποίοι χρησιμοποιούνται για τον υπολογισμό
+          κάποιας αριθμητικής τιμής. Τους τελεστές αυτούς τους παρουσιάζουμε παρακάτω:
+        </p>
+        <table>
+          <tr>
+            <th>Τελεστής</th>
+            <th>Ονομασία</th>
+            <th>Περιγραφή</th>
+            <th>Παράδειγμα</th>
+          </tr>
+          <tr>
+            <td> + </td>
+            <td> Πρόσθεση </td>
+            <td> Προσθέτει δύο τιμές </td>
+            <td> x + y </td>
+          </tr>
+          <tr>
+            <td> - </td>
+            <td> Αφαίρεση </td>
+            <td> Αφαιρεί μία τιμή απο μιά άλλη </td>
+            <td> x - y </td>
+          </tr>
+          <tr>
+            <td> * </td>
+            <td> Πολλαπλασιασμός </td>
+            <td> Πολλαπλασιάζει δύο τιμές </td>
+            <td> x * y </td>
+          </tr>
+          <tr>
+            <td> / </td>
+            <td> Διαίρεση </td>
+            <td> Διαιρεί μία τιμή με μία άλλη </td>
+            <td> x / y </td>
+          </tr>
+          <tr>
+            <td> % </td>
+            <td> Modulus </td>
+            <td> Επιστρέφει το υπόλοιπο της διαίρεσης </td>
+            <td> x % y </td>
+          </tr>
+          <tr>
+            <td> ++ </td>
+            <td> Αύξηση </td>
+            <td> Αυξάνει την τιμή μιάς μεταβλητής κατά 1 </td>
+            <td> ++x </td>
+          </tr>
+          <tr>
+            <td> -- </td>
+            <td> Μείωση </td>
+            <td> Μειώνει την τιμή μιάς μεταβλητής κατά 1 </td>
+            <td> --x </td>
+          </tr>
+        </table>
+        <hr>
+        <h2>Λογικοί και σχετικόι τελεστές</h2>
+        <p>
+          Άλλοι τελεστές χρησιμοποιούνται για να προσδιορίζουν τι σχέση
+          υπάρχει μεταξύ δύο μεταβλητές
+        </p>
+        <table>
+          <tr>
+            <th>Τελεστής</th>
+            <th>Περιγραφή</th>
+            <th>Παράδειγμα</th>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>Ισότητα</td>
+            <td>x = y</td>
+          </tr>
+          <tr>
+            <td>&lt;</td>
+            <td>Μικρότερο από</td>
+            <td>x &lt; y</td>
+          </tr>
+          <tr>
+            <td>&lt;=</td>
+            <td>Μικρότερο ή ίσο</td>
+            <td>x &lt;= y</td>
+          </tr>
+          <tr>
+            <td>&gt;</td>
+            <td>Μεγαλύτερο από</td>
+            <td>x &gt; y</td>
+          </tr>
+          <tr>
+            <td>&gt;=</td>
+            <td>Μεγαλύτερο ή ίσο</td>
+            <td>x &gt;= y</td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>Λογικό Ή</td>
+            <td>x || y</td>
+          </tr>
+          <tr>
+            <td>&&</td>
+            <td>Λογικό ΚΑΊ</td>
+            <td>x && y</td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>Διάφορο</td>
+            <td>x != y</td>
+          </tr>
+        </table>
+        <hr>
+        <a class="previous-button" href="c-data-types.html"><span>Previous</span></a>
+        <a class="next-button" href="c-strings.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +194,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

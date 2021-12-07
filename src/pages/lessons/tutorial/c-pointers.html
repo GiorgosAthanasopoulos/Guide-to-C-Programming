@@ -12,8 +12,8 @@
     />
     <title>C Δείκτες</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -48,7 +48,7 @@
           >C Break/Continue</a
         >
         <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
-        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
+        <a class="current-page" href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
         <h2>C Συναρτήσεις</h2>
         <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
         <a href="../../lessons/functions/c-function-parameters.html"
@@ -63,8 +63,54 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Δείκτες</h1>
+        <p> 
+          Οι δείκτες είναι ένα ίσως και το πιο σημαντικό μέρος της C και θεωρείται
+          και ως ένα απο τα πιό δύσκολα στην πλήρη κατανόηση. Ας αναλύσουμε τους δείκτες 
+          βήμα βήμα
+        </p>
+        <hr>
+        <h2>Μεταβλητές στην μνήμη</h2>
+        <p>
+          Η κύρια μνήμη του υπολογιστή αποτελείται απο κελιά τα οποία αποθηκεύουν
+          σχήματα απο bit. Το κάθε ένα απο αυτά τα κελιά έχουν μία διεύθυνση, δηλαδή 
+          έναν αριθμό ο οποίος είναι ξεχωριστός μόνο για αυτούς. Με άλλα λόγια, εαν γνωρίζουμε
+          την διεύθυνση ενός κελιού μπορούμε να το βρούμε και να δούμε τι σχήμα bit έχει
+          αποθηκεύσει. Όταν δηλώνουμε μία μεταβλητή στην C η μεταβλητή αυτή χρησιμοποιεί
+          κάποια κελιά μνήμης (το πλήθος εξαρτάται απο τον τύπο της μεταβλητής) στα οποία
+          αποθηκεύεται η τιμή της. Οι μεταβλητές οι οποίες χρησιμοποιούνται για να αποθηκεύσουν
+          μία διεύθυνση κελιόυ λέγονται δείκτες. Μπορούμε να δηλώσουμε έναν δείκτη ως εξής:
+          <pre class="prettyprint"><i>type</i>* i;</pre>
+          Οπού το i είναι ένας δείκτης που κρατάει την διεύθυνση μίας μεταβλητής τύπου <i>type</i>.
+          Για να θέσουμε στην i μιά τιμή χρειαζόμαστε την διεύθυνση μιάς μεταβλητής
+          τύπου type. Για να βρούμε την διεύθυνση μιάς μεταβλητής χρησιμοποιούμε το 
+          σύμβολο &:
+          <pre class="prettyprint">
+int x = 5;
+int* p = &amp;x;</pre>
+        Οπότε τώρα το p κρατάει την διεύθυνση του x.
+        </p>
+        <hr>
+        <h2>Dereferencing</h2>
+        <p>
+          Ωραία, έχουμε την διεύθυνση της x... Τώρα τι; Υπάρχει ένας τρόπος
+          όταν έχουμε έναν δείκτη που κρατάει την διεύθυνση μιάς μεταβλητής,
+          να πάμε στην διεύθυνση που δείχνει και είτε να διαβάσουμε το περιεχόμενό
+          τής είτε να το αλλάξουμε. Αυτά το κάνουμε με την χρήση του αστερίσκου
+          πρίν το όνομα του δείκτη.
+          <pre class="prettyprint">
+  int x = 5;
+  int* p = &amp;x;
+  *p = 3;
+  printf("%d", x);</pre>
+        Ενώ φαινομενικά δεν έχουμε αγγίξει την μεταβλητή x, αν τρέξετε τον παρακάτω
+        κώδικα θα δείτε πως εκτυπώνεται η τιμή 3. Αυτό είναι επειδή χρησιμοποιήσαμε
+        την εντολή *p = 3; που σημαίνει "εκχώρησε την τιμή 3 στο κελί του οποίου η διεύθυνση
+        βρίσκεται μέσα στην μεταβλητή p"
+        </p>
+        <hr>
+        <a class="previous-button" href="c-arrays.html"><span>Previous</span></a>
+        <a class="next-button" href="../functions/c-functions.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -79,14 +125,14 @@
           <td><a href="../../contact.html">Ομάδα</a></td>
           <td>
             <a
-              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/" target="_blank"
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td><a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a></td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

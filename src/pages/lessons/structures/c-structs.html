@@ -13,8 +13,8 @@
     />
     <title>C Δομές</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -56,7 +56,7 @@
           >C Παράμετροι σε Συναρτήσεις</a
         >
         <h2>C Δομές</h2>
-        <a href="../../lessons/structures/c-structs.html"
+        <a class="current-page" href="../../lessons/structures/c-structs.html"
           >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
         >
         <a href="../../lessons/structures/c-structs2.html"
@@ -64,8 +64,62 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Structs</h1>
+        <p>
+          Πολλές φορές κατα τον προγραμματισμό είναι πάρα πολύ χρήσιμο
+          να συνδυάζουμε πολλές μεταβλητές μέσα σε μία έτσι ώστε να 
+          επιτυγχάνουμε τους σκοπούς μας πιο εύκολα και καθαρά.
+        </p>
+        <hr>
+        <h2>Ένα απλοϊκό παράδειγμα</h2>
+        <p>
+          Φανταστείτε ότι συντάσσετε ένα πρόγραμμα το οποίο ζωγραφίζει σχήματα στην οθόνη. 
+          Μέσα σε αυτό το πρόγραμμα θα δημιουργήσετε συναρτήσεις οι οποίες λαμβάνουν ως παραμέτρους
+          πληροφορίες σχετικά με αυτά τα σχήματα, όπως την τοποθεσία τους στην οθόνη και το μέγεθός τους.
+          Έστω τώρα πως θέλουμε να ζωγραφίσουμε την κοινή περιοχή δύο ορθογωνίων. Αυτό σημαίνει πως
+          θα πρέπει να περάσουμε σε μία συνάρτηση τις πληροφορίες 2 ορθογονίων, δηλαδή την τεταγμένη του,
+          την τετμημένη του, το πλάτος του και το ύψος του. Συνεπώς δύο τέτοια ορθογώνια θα απαιτήσουν
+          8 διαφορετικά ορίσματα για να λειτουργήσει η συνάρτηση. Αυτό απο μόνο του δημιουργεί ένα χάος,
+          αλλα για τώρα χρησιμοποιούμε αυτή την τεχνική και έχουμε μία συνάρτηση με 8 παραμέτρους. Έστω τώρα
+          πως αργότερα αποφασίζουμε πως θελουμε το κάθε ορθογώνιο επίσης να έχει χρώμα, που σημαίνει
+          ότι θα πρέπει να βάλουμε τουλάχιστον άλλες 3 μεταβλητές των ενός byte για κάθε ορθογώνιο (rgb),
+          που σημαίνει ότι η συνάρτησή μας τώρα όχι μόνον παίρνει 14 ορίσματα (γεγονός που είναι απολύτως χαοτικό),
+          αλλά θα πρέπει να αλλάξουμε τον ορισμό της συνάρτησης καθώς και κάθε κλήση της συνάρτησης μέσα στο πρόγραμμα.
+          Είναι ξεκάθαρο πως αυτό δεν μπορεί να συνεχιστεί. Για αυτόν τον λόγο μπορούμε να χρησιμοποιήσουμε structs,
+          και να κάνουμε την ζωή μας εύκολη. 
+          <pre class="prettyprint">
+            typedef unsigned char byte_t;
+
+            struct Color {
+              byte_t r, g, b;
+            }
+
+            struct Size {
+              unsigned int cx, cy;
+            }
+
+            struct Point {
+              int x, y;
+            }
+
+            struct Rectangle {
+              struct Point pos;
+              struct Size size;
+              struct Color color;
+            }
+
+            void DrawIntersection(struct Rectangle a, struct Rectangle b)
+            {
+              /* ... */
+            }
+          </pre>
+          Τώρα, όχι μόνον εκφράζεται με απόλυτη σαφήνεια ο σκοπός του κάθε μέλους του ορθογωνίου,
+          αλλά η οποιαδήποτε αλλαγή στην δομή μπορεί να εφαρμοστεί χωρίς να αλλάξει κανένα άλλο
+          στοιχείο. Με άλλα λόγια, προσφέρει και ένα στοιχείο αφαιρετικότητας
+        </p>
+        <hr>
+        <a class="previous-button" href="../functions/c-function-parameters.html"><span>Previous</span></a>
+        <a class="next-button" href="c-structs2.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +135,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

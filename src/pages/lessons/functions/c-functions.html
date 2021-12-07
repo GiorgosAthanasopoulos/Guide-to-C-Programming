@@ -13,8 +13,8 @@
     />
     <title>C Συναρτήσεις</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -51,7 +51,7 @@
         <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
         <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
         <h2>C Συναρτήσεις</h2>
-        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
+        <a class="current-page" href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
         <a href="../../lessons/functions/c-function-parameters.html"
           >C Παράμετροι σε Συναρτήσεις</a
         >
@@ -64,8 +64,59 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Συναρτήσεις</h1>
+        <hr>
+        Οι συναρτήσεις είναι κομμάτια κώδικα τα οποία τρέχουν μόνο όταν καλούνται
+        από κάποιο άλλο μέρος του προγράμματος. Οι συναρτήσεις μπορούν να λάβουν δεδομένα
+        ως παραμέτρους, τα οποία μπορούν να χρησιμοποιήσουν για να επιτελέσουν κάποιον σκοπό.
+        <hr>
+        <h2>Δημιουργιά συναρτήσεων</h2>
+        <p> 
+          Ο τρόπος με τον οποίο συντάσσουμε συναρτήσεις παραμένει γενικά ίδιος. Πρέπει να πούμε
+          στον μεταγλωττιστή τι είδος μεταβλητής επιστρέφει, το όνομα της συνάρτησης, τον τύπο και όνομα
+          κάθε παραμέτρου και το 'σώμα' της συνάρτησης.
+          <pre class="prettyprint">
+  <i>return_type name</i>(<i>type1 arg1, type2 arg2, ...</i>) 
+  {
+    /* σώμα */
+  }</pre>
+          Μπορούμε να το δούμε εύκολα στην πράξη αυτό με την συνάρτηση main την οποία
+          ήδη γνωρίζουμε
+          <pre class="prettyprint">
+  int main(int argc, char* argv[])
+  {
+    /* ... */
+  }</pre>
+        </p>
+        <hr>
+        <h2>Κλήση συναρτήσεων</h2>
+        <p> 
+          Με τον ίδιο τρόπο που καλούμε τις συναρτήσεις των βιβλιοθηκών (π.χ. printf), 
+          μπορούμε να καλέσουμε και τις δικές μας συναρτήσεις. Αρκεί να γράψουμε το όνομα και
+          να περάσουμε τα κατάλληλα ορίσματα.
+          <pre class="prettyprint">
+  #include &lt;stdio.h&gt;
+
+  /* void σημαίνει δεν επιστρέφει τίποτα */
+  void func(int x)
+  {
+    for (int i = 0; i &lt; 100; ++i)
+    {
+      printf("%d\n", i);
+    }
+  }
+
+  int main(void)
+  {
+    func(5);
+    func(10);
+    func(); /* error */
+  }
+          </pre>
+        </p>
+        <hr>
+        <a class="previous-button" href="../tutorial/c-pointers.html"><span>Previous</span></a>
+        <a class="next-button" href="c-function-parameters.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +132,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>

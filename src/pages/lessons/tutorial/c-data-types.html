@@ -13,8 +13,8 @@
     />
     <title>C Τύποι Μεταβλητές</title>
   </head>
-  <body>
-    <!-- THIS IS LESSONS'S SECTION HOME -->
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
     <div id="header-container">
       <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -36,7 +36,7 @@
         <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
         <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
         <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
-        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
+        <a class="current-page" href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
         <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
         <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
         <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
@@ -64,8 +64,84 @@
         >
       </div>
       <div id="lesson-area">
-        ← Και η εμφάνιση και το περιεχόμενο είναι ενδεικτικα Κάνε ό,τι νομίζεις
-        στην εμφάνιση. Εδώ θα μπαίνουν τα Μαθήματα
+        <h1>Τύποι Δεδομένων</h1>
+        <hr>
+        <p>
+          Όπως είδαμε στο μάθημα των μεταβλητών, οι μεταβλητές πρέπει να
+          'έχουν' κάποιον τύπο που τις χαρακτηρίζουν. Για παράδειγμα:
+        </p>
+        <pre class="prettyprint">
+
+  int i = -5;
+  float f = 3.14f;
+  double d = 6.28;
+  char c = 'D';
+        </pre>
+        <hr>
+        <h2>Βασικοί τύποι δεδομένων</h2>
+        <table>
+          <tr>
+            <th> Τύπος </th>
+            <th> Μέγεθος </th>
+            <th> Περιγραφή </th>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>4 bytes</td>
+            <td>Αποθηκεύει ακέραιους αριθμούς</td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>4 bytes</td>
+            <td>Αποθηκεύει δεκαδικούς αριθμούς με ακρίβεια 7 δεκαδικών ψηφιών</td>
+          </tr>
+          <tr>
+            <td>double</td>
+            <td>8 bytes</td>
+            <td>Αποθηκεύει δεκαδικούς αριθμούς με ακρίβεια 16 δεκαδικών ψηφίων</td>
+          </tr>
+          <tr>
+            <td>char</td>
+            <td>1 bytes</td>
+            <td>Αποθηκεύει χαρακτήρες που εμπίπτουν στο ASCII</td>
+          </tr>
+        </table>
+        <p>
+          Στον παραπάνω πίνακα μπορείτε να δείτε λεπτομέρειες για τον κάθε τύπο
+        </p>
+        <hr>
+        <h2>Τροποποιήσεις τύπων</h2>
+        <p>
+          Μπορούμε να χρησιμοποιήσουμε κάποιες δεσμευμένες λέξεις που μας παρέχει η γλώσσα προκειμένου να αλλάξουμε
+          ελαφρώς την λειτουργεία των τύπων που έχουμε εξετάσει ώς τώρα. Αρχικά, με εξαίρεση τους τύπους
+          που χρησιμοποιούνται για την αποθήκευση δεκαδικών αριθμών, μπορούμε να χρησιμοποιήσουμε τις λέξεις
+          signed και unsigned ώστε να πούμε στον μεταγλωττιστή πως η μεταβλητή ή μπορεί ή δεν μπορεί να λαμβάνει
+          αρνητικές τιμές αντιστοίχως. Επίσης, μπορούμε να χρησιμοποιήσουμε τις λέξεις short και long ώστε να αλλάξουμε
+          το μέγεθος κάποιον τύπων. Δείτε παρακάτω:
+        </p>
+        <pre class="prettyprint">
+
+          /* Πρέπει να είναι μη αρνητικό */
+          unsigned int i = 5;
+
+          /* Το signed μπορεί να παραληφθεί */
+          signed int x = -4;
+
+          unsigned char c = 'a';
+
+          /* Είναι τουλάχιστον 4 bytes
+           εξαρτάται απ'το μηχάνημα */
+          long f = 3;
+
+          /* Συνήθως 2 bytes */
+          short s = 453; 
+
+          /* ERROR */
+          unsigned float f = 3;
+        </pre>
+        <hr>
+        <a class="previous-button" href="c-syntax.html"><span>Previous</span></a>
+        <a class="next-button" href="c-comments.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -81,16 +157,13 @@
           <td>
             <a
               href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              target="_blank"
               >GitHub</a
             >
           </td>
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td>
-            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
-          </td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
