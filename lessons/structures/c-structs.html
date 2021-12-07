@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/index.css" />
+    <link rel="stylesheet" href="../../../styles/lessons.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../images/icon.png"
+    />
+    <title>C Δομές</title>
+  </head>
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <div id="header-container">
+      <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
+      <span id="navigation-menu">
+        <a href="../../../index.html"> Αρχική </a>
+        <a class="active" href="../../lessons.html"> Μαθήματα </a>
+        <a href="../../references.html"> Πηγές </a>
+        <a href="../../exercises.html"> Ασκήσεις Εξάσκησης </a>
+        <a href="../../contact.html"> Επικοινωνία </a>
+      </span>
+    </div>
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
+        <h2>C Μαθήματα</h2>
+        <a href="../../lessons.html">C Αρχική</a>
+        <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
+        <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
+        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
+        <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
+        <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
+        <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
+        <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
+        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
+        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
+        <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
+        <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
+        <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
+        <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
+        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
+        <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
+        <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
+        <a href="../../lessons/tutorial/c-break-continue.html"
+          >C Break/Continue</a
+        >
+        <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
+        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
+        <h2>C Συναρτήσεις</h2>
+        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
+        <a href="../../lessons/functions/c-function-parameters.html"
+          >C Παράμετροι σε Συναρτήσεις</a
+        >
+        <h2>C Δομές</h2>
+        <a class="current-page" href="../../lessons/structures/c-structs.html"
+          >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
+        >
+        <a href="../../lessons/structures/c-structs2.html"
+          >C Δείκτες για δομές, δομές ως ορίσματα σε Συναρτήσεις</a
+        >
+      </div>
+      <div id="lesson-area">
+        <h1>Structs</h1>
+        <p>
+          Πολλές φορές κατα τον προγραμματισμό είναι πάρα πολύ χρήσιμο
+          να συνδυάζουμε πολλές μεταβλητές μέσα σε μία έτσι ώστε να 
+          επιτυγχάνουμε τους σκοπούς μας πιο εύκολα και καθαρά.
+        </p>
+        <hr>
+        <h2>Ένα απλοϊκό παράδειγμα</h2>
+        <p>
+          Φανταστείτε ότι συντάσσετε ένα πρόγραμμα το οποίο ζωγραφίζει σχήματα στην οθόνη. 
+          Μέσα σε αυτό το πρόγραμμα θα δημιουργήσετε συναρτήσεις οι οποίες λαμβάνουν ως παραμέτρους
+          πληροφορίες σχετικά με αυτά τα σχήματα, όπως την τοποθεσία τους στην οθόνη και το μέγεθός τους.
+          Έστω τώρα πως θέλουμε να ζωγραφίσουμε την κοινή περιοχή δύο ορθογωνίων. Αυτό σημαίνει πως
+          θα πρέπει να περάσουμε σε μία συνάρτηση τις πληροφορίες 2 ορθογονίων, δηλαδή την τεταγμένη του,
+          την τετμημένη του, το πλάτος του και το ύψος του. Συνεπώς δύο τέτοια ορθογώνια θα απαιτήσουν
+          8 διαφορετικά ορίσματα για να λειτουργήσει η συνάρτηση. Αυτό απο μόνο του δημιουργεί ένα χάος,
+          αλλα για τώρα χρησιμοποιούμε αυτή την τεχνική και έχουμε μία συνάρτηση με 8 παραμέτρους. Έστω τώρα
+          πως αργότερα αποφασίζουμε πως θελουμε το κάθε ορθογώνιο επίσης να έχει χρώμα, που σημαίνει
+          ότι θα πρέπει να βάλουμε τουλάχιστον άλλες 3 μεταβλητές των ενός byte για κάθε ορθογώνιο (rgb),
+          που σημαίνει ότι η συνάρτησή μας τώρα όχι μόνον παίρνει 14 ορίσματα (γεγονός που είναι απολύτως χαοτικό),
+          αλλά θα πρέπει να αλλάξουμε τον ορισμό της συνάρτησης καθώς και κάθε κλήση της συνάρτησης μέσα στο πρόγραμμα.
+          Είναι ξεκάθαρο πως αυτό δεν μπορεί να συνεχιστεί. Για αυτόν τον λόγο μπορούμε να χρησιμοποιήσουμε structs,
+          και να κάνουμε την ζωή μας εύκολη. 
+          <pre class="prettyprint">
+            typedef unsigned char byte_t;
+
+            struct Color {
+              byte_t r, g, b;
+            }
+
+            struct Size {
+              unsigned int cx, cy;
+            }
+
+            struct Point {
+              int x, y;
+            }
+
+            struct Rectangle {
+              struct Point pos;
+              struct Size size;
+              struct Color color;
+            }
+
+            void DrawIntersection(struct Rectangle a, struct Rectangle b)
+            {
+              /* ... */
+            }
+          </pre>
+          Τώρα, όχι μόνον εκφράζεται με απόλυτη σαφήνεια ο σκοπός του κάθε μέλους του ορθογωνίου,
+          αλλά η οποιαδήποτε αλλαγή στην δομή μπορεί να εφαρμοστεί χωρίς να αλλάξει κανένα άλλο
+          στοιχείο. Με άλλα λόγια, προσφέρει και ένα στοιχείο αφαιρετικότητας
+        </p>
+        <hr>
+        <a class="previous-button" href="../functions/c-function-parameters.html"><span>Previous</span></a>
+        <a class="next-button" href="c-structs2.html"><span>Next</span></a>
+      </div>
+    </div>
+    <footer>
+      <table>
+        <tr>
+          <th>Υπηρεσίες</th>
+          <th>Σχετικά με εμάς</th>
+          <th>Ιστοσελίδα</th>
+        </tr>
+        <tr>
+          <td><a href="../../lessons.html">Μαθήματα</a></td>
+          <td><a href="../../contact.html">Ομάδα</a></td>
+          <td>
+            <a
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
+              >GitHub</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><a href="../../exercises.html">Ασκήσεις</a></td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
+        </tr>
+      </table>
+      <h5>&copy; Athens University of Economics and Business</h5>
+    </footer>
+  </body>
+</html>

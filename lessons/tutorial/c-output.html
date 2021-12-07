@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/index.css" />
+    <link rel="stylesheet" href="../../../styles/lessons.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../images/icon.png"
+    />
+    <title>C ΈΞοδος</title>
+  </head>
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <div id="header-container">
+      <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
+      <span id="navigation-menu">
+        <a href="../../../index.html"> Αρχική </a>
+        <a class="active" href="../../lessons.html"> Μαθήματα </a>
+        <a href="../../references.html"> Πηγές </a>
+        <a href="../../exercises.html"> Ασκήσεις Εξάσκησης </a>
+        <a href="../../contact.html"> Επικοινωνία </a>
+      </span>
+    </div>
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
+        <h2>C Μαθήματα</h2>
+        <a href="../../lessons.html">C Αρχική</a>
+        <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
+        <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
+        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
+        <a class="current-page" href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
+        <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
+        <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
+        <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
+        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
+        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
+        <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
+        <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
+        <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
+        <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
+        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
+        <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
+        <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
+        <a href="../../lessons/tutorial/c-break-continue.html"
+          >C Break/Continue</a
+        >
+        <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
+        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
+        <h2>C Συναρτήσεις</h2>
+        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
+        <a href="../../lessons/functions/c-function-parameters.html"
+          >C Παράμετροι σε Συναρτήσεις</a
+        >
+        <h2>C Δομές</h2>
+        <a href="../../lessons/structures/c-structs.html"
+          >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
+        >
+        <a href="../../lessons/structures/c-structs2.html"
+          >C Δείκτες για δομές, δομές ως ορίσματα σε Συναρτήσεις</a
+        >
+      </div>
+      <div id="lesson-area">
+        <p>
+          <h1>Έξοδος</h1>
+          <p> Σε κάθε πρόγραμμα που θα γράψετε θα πρέπει να εμφανίζεται κάποιο μήνυμα ή κάποια τιμή
+            στην οθόνη, ειδάλλως δεν θα είναι ιδιαιτέρως χρήσιμο (εκτός και αν επιτελεί κάποια προχωρημένη λειτουργεία)
+          </p>
+          <hr>
+          <h2>Εμφάνιση κειμένου</h2>
+          <p>Όπως είδαμε και πρίν, μπορούμε να χρησιμοποιήσουμε την συνάρτηση printf που βρίσκεται μέσα στην βιβλιοθήκη
+            stdio.h για να εμφανίσουμε κείμενο καθώς και τιμές μεταβλητών. Υπάρχουν και άλλες συναρτήσεις που εμφανίζουν
+            συμβολοσειρές στην οθόνη, όμως θα εξετάσουμε μόνο αυτήν.
+          </p>
+          <pre class="prettyprint">
+
+  #include &lt;stdio.h&gt;
+
+  int main()
+  {
+    printf("Hello, world!");
+    return 0;
+  }
+          </pre>
+          <p>Μπορούμε να βάλουμε μία δεύτερη κλήση της printf, και τότε θα παρατηρήσουμε
+            ότι δεν εισάγεται νέα γραμμή μετά το τέλος του πρώτου μηνύματος
+          </p>
+          <pre class="prettyprint">
+
+  #include &lt;stdio.h&gt;
+          
+  int main()
+  {
+    printf("Hello, world!");
+    printf(" same line");
+    return 0;
+  }
+                    </pre>
+        </p>
+        <hr>
+        <h2>Νέα γραμμή</h2>
+        <p>
+          Σε όλες τις γλώσσες προγραμματισμού υπάρχουν ειδικοί χαρακτήρες οι οποίοι 
+          μεταλλάσσουν την έξοδο με ειδικό τρόπο. Οι χαρακτήρες γράφονται ως συνδυασμό 
+          του <b>back-slash \ </b> και ενός γράμματος. Αν βάλουμε n μετά το back-slash
+          (δηλαδή \n) τότε όταν συναντηθεί αυτός ο χαρακτήρας κατα την εκτύπωση θα αλλάξει γραμμή η εκτύπωση.
+        </p>
+        <pre class="prettyprint">
+
+  #include &lt;stdio.h&gt;
+                  
+  int main()
+  {
+    printf("Hello, world!\n");
+    printf(" different line");
+    return 0;
+  }
+  </pre>
+  <p> Δοκιμάστε και αυτό το πρόγραμμα να δείτε τι θα γίνει!</p>
+        <hr>
+        <a class="previous-button" href="c-syntax.html"><span>Previous</span></a>
+        <a class="next-button" href="c-comments.html"><span>Next</span></a>
+      </div>
+    </div>
+    <footer>
+      <table>
+        <tr>
+          <th>Υπηρεσίες</th>
+          <th>Σχετικά με εμάς</th>
+          <th>Ιστοσελίδα</th>
+        </tr>
+        <tr>
+          <td><a href="../../lessons.html">Μαθήματα</a></td>
+          <td><a href="../../contact.html">Ομάδα</a></td>
+          <td>
+            <a
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
+              >GitHub</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><a href="../../exercises.html">Ασκήσεις</a></td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
+        </tr>
+      </table>
+      <h5>&copy; Athens University of Economics and Business</h5>
+    </footer>
+  </body>
+</html>

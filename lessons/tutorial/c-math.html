@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/index.css" />
+    <link rel="stylesheet" href="../../../styles/lessons.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../images/icon.png"
+    />
+    <title>C Μαθηματικά</title>
+  </head>
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <div id="header-container">
+      <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
+      <span id="navigation-menu">
+        <a href="../../../index.html"> Αρχική </a>
+        <a class="active" href="../../lessons.html"> Μαθήματα </a>
+        <a href="../../references.html"> Πηγές </a>
+        <a href="../../exercises.html"> Ασκήσεις Εξάσκησης </a>
+        <a href="../../contact.html"> Επικοινωνία </a>
+      </span>
+    </div>
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
+        <h2>C Μαθήματα</h2>
+        <a href="../../lessons.html">C Αρχική</a>
+        <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
+        <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
+        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
+        <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
+        <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
+        <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
+        <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
+        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
+        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
+        <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
+        <a class="current-page" href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
+        <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
+        <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
+        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
+        <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
+        <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
+        <a href="../../lessons/tutorial/c-break-continue.html"
+          >C Break/Continue</a
+        >
+        <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
+        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
+        <h2>C Συναρτήσεις</h2>
+        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
+        <a href="../../lessons/functions/c-function-parameters.html"
+          >C Παράμετροι σε Συναρτήσεις</a
+        >
+        <h2>C Δομές</h2>
+        <a href="../../lessons/structures/c-structs.html"
+          >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
+        >
+        <a href="../../lessons/structures/c-structs2.html"
+          >C Δείκτες για δομές, δομές ως ορίσματα σε Συναρτήσεις</a
+        >
+      </div>
+      <div id="lesson-area">
+        <h1>Μαθηματικά</h1>
+        <p>
+          Όχι, δεν θα αναλύσουμε ολοκληρώματα και σειρές, δεν υπάρχει λόγος
+          να πανικοβληθείτε, απλά θα παρουσιάσουμε μερικές συναρτήσεις που διαθέτει
+          η βιβλιοθήκη των μαθηματικών της C για περίπλοκους μαθηματικούς υπολογισμούς
+          (στην περίπτωσή μας ο όρος 'συνάρτηση' είναι και εύστοχος μαθηματικά)
+        </p>
+        <hr>
+        <h2>Η Βιβλιοθήκη &lt;math.h&gt;</h2>
+        <p>
+          Πολλές φορές στην προγραμματιστική σας πορεία θα συναντήσετε την ανάγκη να
+          κάνετε κάποιον λίγο πιό περίπλοκο υπολογισμό απο το 1 + 1. Δυστυχώς, η γλώσσα
+          δεν διαθέτει ενθεματικούς τελεστές ώστε να υπολογίζουμε ημίτονα και τετραγωνικές
+          ρίζες, κάτι που είναι απολύτως λογικό.
+        </p>
+        <p>
+          Δεν θα αναλύσουμε τι κάνει η κάθε συνάρτηση συγκεκριμένα επειδή δεν είμαστε
+          εδώ για να σας μάθουμε μαθηματικά. Μπορείτε να δείτε όλες τις συναρτήσεις που περιέχει
+          η βιβλιοθήκη <a href="https://www.tutorialspoint.com/c_standard_library/math_h.htm">εδώ</a>.
+          Θα δείξουμε όμως ένα παράδειγμα για να συνεχίσουμε την παράδοση.
+          <pre class="prettyprint">
+  #include &lt;math.h&gt;
+  #include &lt;stdio.h&gt;
+
+  int main()
+  {
+    printf("%lf", sqrt(3.14159265));
+
+    return 0;
+  }
+          </pre>
+          Στο παραπάνω πρόγραμμα υπολογίιζουμε πολύ απλά την τετραγωνική ρίζα του π.
+          Όσοι γνωρίζουν σχετικά καλά μαθηματικά δεν θα έχουν κανένα πρόβλημα ούτε να
+          καταλάβουν τι κάνουν όλες αυτές οι συναρτήσεις ούτε θα δυσκολευτούν να τις 
+          χρησιμοποιήσουν. Δεν χρειάζεται να τις απομνημονεύσετε όλες, αρκεί να ξέρετε
+          πού θα πρέπει να στραφείτε όταν θα έρθει η ώρα να κάνετε κάποιον μαθηματικό
+          υπολογισμό, π.χ. όταν αναπτύσσετε ένα παιχνίδι και θα πρέπει να υπολογίσετε μία
+          κυκλική απόσταση γύρω απο ένα σημείο
+        </p>
+        <hr>
+        <a class="previous-button" href="c-strings.html"><span>Previous</span></a>
+        <a class="next-button" href="c-booleans.html"><span>Next</span></a>
+      </div>
+    </div>
+    <footer>
+      <table>
+        <tr>
+          <th>Υπηρεσίες</th>
+          <th>Σχετικά με εμάς</th>
+          <th>Ιστοσελίδα</th>
+        </tr>
+        <tr>
+          <td><a href="../../lessons.html">Μαθήματα</a></td>
+          <td><a href="../../contact.html">Ομάδα</a></td>
+          <td>
+            <a
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
+              >GitHub</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><a href="../../exercises.html">Ασκήσεις</a></td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
+        </tr>
+      </table>
+      <h5>&copy; Athens University of Economics and Business</h5>
+    </footer>
+  </body>
+</html>

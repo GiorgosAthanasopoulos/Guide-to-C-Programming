@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/index.css" />
+    <link rel="stylesheet" href="../../../styles/lessons.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../images/icon.png"
+    />
+    <title>C Συνθήκες</title>
+  </head>
+  <body onload="PR.prettyPrint()">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <div id="header-container">
+      <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
+      <span id="navigation-menu">
+        <a href="../../../index.html"> Αρχική </a>
+        <a class="active" href="../../lessons.html"> Μαθήματα </a>
+        <a href="../../references.html"> Πηγές </a>
+        <a href="../../exercises.html"> Ασκήσεις Εξάσκησης </a>
+        <a href="../../contact.html"> Επικοινωνία </a>
+      </span>
+    </div>
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
+        <h2>C Μαθήματα</h2>
+        <a href="../../lessons.html">C Αρχική</a>
+        <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
+        <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
+        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
+        <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
+        <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
+        <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
+        <a href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
+        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
+        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
+        <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
+        <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
+        <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
+        <a class="current-page" href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
+        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
+        <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
+        <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
+        <a href="../../lessons/tutorial/c-break-continue.html"
+          >C Break/Continue</a
+        >
+        <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
+        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
+        <h2>C Συναρτήσεις</h2>
+        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
+        <a href="../../lessons/functions/c-function-parameters.html"
+          >C Παράμετροι σε Συναρτήσεις</a
+        >
+        <h2>C Δομές</h2>
+        <a href="../../lessons/structures/c-structs.html"
+          >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
+        >
+        <a href="../../lessons/structures/c-structs2.html"
+          >C Δείκτες για δομές, δομές ως ορίσματα σε Συναρτήσεις</a
+        >
+      </div>
+      <div id="lesson-area">
+        <h1>Συνθήκες</h1>
+        <p>
+          Η ροή ενός προγράμματος θα ήταν πολύ βαρετή αν ήταν πάντα σειριακή, δηλαδή
+          αν η επόμενη εντολή που θα εκτελούταν ήταν πάντα η επόμενη. Πολλές φορές ανάλογα
+          με την περίσταση μπορεί να θέλουμε να δράσουμε διαφορετικά και συνεπώς χρειαζόμαστε
+          μία διακλάδωση στην εκτέλεση του προγράμματος.
+        </p>
+        <hr>
+        <h2>H συνθήκη if</h2>
+        <p>Η συνθήκη if (αν) υπάρχει σε πρακτικά κάθε γλώσσα που υπάρχει και είναι βασικό
+        μέρος των προγραμμάτων. Χωρίς αυτήν δεν θα ήταν δυνατόν να φτιάχνουμε ακόμη και
+        μερικά πολύ βασικά προγράμματα.
+        <pre class="prettyprint">
+  if (<i>condition</i>)
+  {
+    /* Do something here */
+  }</pre>
+          Για παράδειγμα:
+        <pre class="prettyprint">
+
+  int x = 10;
+  int y = 20;
+
+  if (x + y >= 30)
+  {
+    printf("Greater than or equal");
+  }
+        </pre>
+        </p>
+        <hr>
+        <h2>Η συνθήκη else</h2>
+        <p> 
+          Η else θα λέγαμε ότι είναι κατα κάποιον τρόπο μία βοηθητική συνθήκη
+          καθώς και δεν μπορεί να χρησιμοποιηθεί αυτόνομα. Χρησιμοποείται μετά απο μία 
+          συνθήκη if για να δείξει την εναλλακτική πορεία του προγράμματος αν δεν ισχύει
+          η συνθήκη της if.
+          <pre class="prettyprint">
+  int x = 10;
+
+  if (x &lt; 10)
+  {
+    printf("Less than 10");
+  }
+
+  else
+  {
+    printf("Greater than 10");
+  }
+          </pre>
+          Η else μπορεί να έχει απευθείας την λέξη if μετά για να εξεταστεί μία άλλη
+          συνθήκη. Αυτό θα ήταν ισοδύναμο με το να βάζαμε ένα άλλο if μέσα στις αγκύλες μετά
+          το else.
+        </p>
+        <hr>
+        <a class="previous-button" href="c-booleans.html"><span>Previous</span></a>
+        <a class="next-button" href="c-switch.html"><span>Next</span></a>
+      </div>
+    </div>
+    <footer>
+      <table>
+        <tr>
+          <th>Υπηρεσίες</th>
+          <th>Σχετικά με εμάς</th>
+          <th>Ιστοσελίδα</th>
+        </tr>
+        <tr>
+          <td><a href="../../lessons.html">Μαθήματα</a></td>
+          <td><a href="../../contact.html">Ομάδα</a></td>
+          <td>
+            <a
+              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
+              >GitHub</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><a href="../../exercises.html">Ασκήσεις</a></td>
+          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
+        </tr>
+      </table>
+      <h5>&copy; Athens University of Economics and Business</h5>
+    </footer>
+  </body>
+</html>
