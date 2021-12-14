@@ -42,23 +42,25 @@
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
       <div id="excercise-area">
-        <div id="exc-1"></div>
         <h2>Ασκήσεις σε Συμβολοσειρές</h2>
         <hr />
         <h3>Άσκηση 1</h3>
         <p>
           Συμπληρώστε το μέρος που λείπει για να δημιουργήσετε μια μεταβλητή
-          χαιρετισμού τύπου string και αντιστοιχίστε της την τιμή Hello.
+          greeting τύπου string και αντιστοιχίστε της την τιμή Hello.
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-1"
+          id="exc-1"
           style="padding: 10px; padding-bottom: 1px"
         >
 <input id="strings-exc-1" class="excercise" type="text" size="4" maxlength="4"> <input id="strings-exc-1-1" class="excercise" type="text" size="10" maxlength="10"> = <input id="strings-exc-1-2" class="excercise" type="text" size="7" maxlength="7">;
         </pre>
+        <script src="../../scripts/exercises.js"></script>
+        <script>
+          var answers = [["char", "greeting[]", '"Hello"']]
+        </script>
         <button
-          id="show-answer-button-1"
           class="show-answer-button"
           style="
             margin-top: -58px;
@@ -67,14 +69,14 @@
             padding-right: 25px;
             padding-left: 25px;
           "
-          onclick="show_answer_button_1_clicked();"
+          onclick="onShowAnswer('exc-1',answers)"
         >
           Show Answer
         </button>
         <button
           id="submit-answer-button-1"
           class="submit-button"
-          onclick="submit_answer_button_1_clicked();"
+          onclick="onSubmitAnswer('exc-1',answers)"
         >
           Submit Answer ❯
         </button>
@@ -297,6 +299,5 @@ printf("Your name is: %s", fullname);
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
     </footer>
-    <script src="../../scripts/c-strings.js"></script>
   </body>
 </html>

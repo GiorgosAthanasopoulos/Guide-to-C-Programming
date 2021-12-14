@@ -11,6 +11,7 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
+    <script src="../../scripts/exercises.js"></script>
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -27,9 +28,7 @@
         <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
         <a href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
         <a href="c-user-input.html">Ασκήσεις σε Είσοδο</a>
-        <a class="current-page" href="c-data-types.html"
-          >Ασκήσεις σε Τύπους Δεδομένων</a
-        >
+        <a class="current-page" href="c-data-types.html">Ασκήσεις σε Τύπους Δεδομένων</a>
         <a href="c-operators.html">Ασκήσεις σε Τελεστές</a>
         <a href="c-strings.html">Ασκήσεις σε Συμβολοσειρές</a>
         <a href="c-math.html">Ασκήσεις σε Μαθηματικά</a>
@@ -42,122 +41,83 @@
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
       <div id="excercise-area">
-        <!-- EXC 1 -->
-        <div id="exc-1"></div>
+        <script> answers = [ 
+          ['int', 'double', 'char', 'char', '[]'],
+          ['int', 'x', '5', 'int', 'y', '-x'],
+          ['char', 'greeting[]', 'greeting']
+        ]
+        </script>
         <h2>Ασκήσεις σε Τύπους Δεδομένων</h2>
         <hr />
         <h3>Άσκηση 1</h3>
         <p>Προσθέστε τον σωστό τύπο δεδομένων για τις ακόλουθες μεταβλητές:</p>
-        <pre
-          class="prettyprint lang-c"
-          id="pre-exc-1"
-          style="padding: 10px; padding-bottom: 1px"
-        >
-        <input id="data-types-exc-1" class="excercise" type="text" size="3" maxlength="3"> myNum = 9;
-        <input id="data-types-exc-1-1" class="excercise" type="text" size="6" maxlength="6"> myDoubleNum = 8.99;
-        <input id="data-types-exc-1-2" class="excercise" type="text" size="4" maxlength="4"> myLetter = 'A';
-        <input id="data-types-exc-1-3" class="excercise" type="text" size="4" maxlength="4"> myBool = false;
-        <input id="data-types-exc-1-4" class="excercise" type="text" size="4" maxlength="4"> myText<input id="data-types-exc-1-5" class="excercise" type="text" size="2" maxlength="2"> = "Hello World";
+        <pre class="prettyprint lang-c" style="padding: 10px; padding-bottom: 1px" id="exc-1">
+        <input class="excercise" type="text" size="3" maxlength="3"> myNum = 9;
+        <input class="excercise" type="text" size="6" maxlength="6"> myDoubleNum = 8.99;
+        <input class="excercise" type="text" size="4" maxlength="4"> myLetter = 'A';
+        <input class="excercise" type="text" size="4" maxlength="4"> myText<input class="excercise" type="text" size="2" maxlength="2"> = "Hello World";
         </pre>
         <button
-          id="show-answer-button-1"
           class="show-answer-button"
-          style="
-            margin-top: -58px;
-            margin-right: 10px;
-            padding: 10px;
-            padding-right: 25px;
-            padding-left: 25px;
-          "
-          onclick="show_answer_button_1_clicked();"
+          onclick="onShowAnswer('exc-1', answers);"
         >
           Show Answer
         </button>
-        <button
-          id="submit-answer-button-1"
-          class="submit-button"
-          onclick="submit_answer_button_1_clicked();"
-        >
+        <button class="submit-button" onclick="onSubmitAnswer('exc-1', answers);">
           Submit Answer ❯
         </button>
         <hr />
-        <!-- EXC 2 -->
-        <div id="exc-2"></div>
         <h3>Άσκηση 2</h3>
         <p>
-          Δημιουργήστε δύο μεταβλητές boolean, που ονομάζονται yay και nay, και
-          προσθέστε τις κατάλληλες τιμές σε αυτές:
+          Δημιουργήστε δύο ακέραιες μεταβλητές με όνομα x και y αντιστοίιχως, αναθέστε την τιμή 5 στην πρώτη μεταβλητή
+          και την αντίθετη τιμή της πρώτης στην δεύτερη.
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-2"
+          id="exc-2"
           style="padding: 10px; padding-bottom: 1px"
         >
-        <input id="data-types-exc-2" class="excercise" type="text" size="4" maxlength="4"> <input id="data-types-exc-2-1" class="excercise" type="text" size="3" maxlength="3"> = <input id="data-types-exc-2-2" class="excercise" type="text" size="4" maxlength="4">;
-        <input id="data-types-exc-2-3" class="excercise" type="text" size="4" maxlength="4"> <input id="data-types-exc-2-4" class="excercise" type="text" size="3" maxlength="3"> = <input id="data-types-exc-2-5" class="excercise" type="text" size="5" maxlength="5">;
+        <input class="excercise" type="text" size="3" maxlength="3"> <input class="excercise" type="text" size="1" maxlength="1"> = <input class="excercise" type="text" size="1" maxlength="1">;
+        <input class="excercise" type="text" size="3" maxlength="3"> <input class="excercise" type="text" size="1" maxlength="1"> = <input class="excercise" type="text" size="2" maxlength="2">;
         </pre>
         <button
-          id="show-answer-button-2"
           class="show-answer-button"
-          style="
-            margin-top: -60px;
-            margin-right: 10px;
-            padding: 10px;
-            padding-right: 25px;
-            padding-left: 25px;
-          "
-          onclick="show_answer_button_2_clicked();"
+          onclick="onShowAnswer('exc-2', answers)"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-2"
           class="submit-button"
-          onclick="submit_answer_button_2_clicked();"
+          onclick="onSubmitAnswer('exc-2', answers)"
         >
           Submit Answer ❯
         </button>
         <hr />
-        <!-- EXC 3 -->
-        <div id="exc-3"></div>
         <h3>Άσκηση 3</h3>
         <p>
-          Δημιουργήστε μια μεταβλητή χαιρετισμού και εμφανίστε την τιμή της:
+          Δηλώστε έναν πίνακα έτσι ώστε να περιέχει το παρακάτω μήνυμα μετά την ανάθεση τιμής
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-3"
+          id="exc-3"
           style="padding: 10px; padding-bottom: 1px"
         >
-        <input id="data-types-exc-3" class="excercise" type="text" size="4" maxlength="4"> <input id="data-types-exc-3-1" class="excercise" type="text" size="10" maxlength="10"> = "Hello";
-        printf(<input id="data-types-exc-3-2" class="excercise" type="text" size="8" maxlength="8">);
+        <input class="excercise" type="text" size="4" maxlength="4"> <input class="excercise" type="text" size="10" maxlength="10"> = "Hello";
+        printf(<input class="excercise" type="text" size="8" maxlength="8">);
         </pre>
         <button
-          id="show-answer-button-3"
           class="show-answer-button"
-          style="
-            margin-top: -58px;
-            margin-right: 10px;
-            padding: 10px;
-            padding-right: 25px;
-            padding-left: 25px;
-          "
-          onclick="show_answer_button_3_clicked();"
+          onclick="onShowAnswer('exc-3', answers)"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-3"
           class="submit-button"
-          onclick="submit_answer_button_3_clicked();"
+          onclick="onSubmitAnswer('exc-3', answers, 'c-operators.html')"
         >
           Submit Answer ❯
         </button>
         <hr />
-        <a class="previous-button" href="c-user-input.html"
-          ><span>Previous</span></a
-        >
-        <a class="next-button" href="c-operators.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -187,6 +147,5 @@
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
     </footer>
-    <script src="../../scripts/c-data-types.js"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="../../images/icon.png" />
   </head>
   <body>
+    <script src="../../scripts/exercises.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
@@ -23,11 +24,9 @@
     </div>
     <div id="excercise-wrapper">
       <div id="excercise-sidebar">
-        <h2>Ασκήσεις</h2>
+        <h2>C Ασκήσεις</h2>
         <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
-        <a class="current-page" href="c-variables.html"
-          >Ασκήσεις σε Μεταβλητές</a
-        >
+        <a class="current-page" href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
         <a href="c-user-input.html">Ασκήσεις σε Είσοδο</a>
         <a href="c-data-types.html">Ασκήσεις σε Τύπους Δεδομένων</a>
         <a href="c-operators.html">Ασκήσεις σε Τελεστές</a>
@@ -52,15 +51,18 @@
           Δημιουργήστε μια μεταβλητή με το όνομα myNum και εκχωρήστε την τιμή 50
           σε αυτήν.
         </p>
-        <pre
-          class="prettyprint lang-c"
-          id="pre-exc-1"
-          style="padding: 10px; padding-bottom: 1px"
-        >
-          <input id="variables-exc-1" class="excercise" type="text" size="3" maxlength="3"> <input id="variables-exc-1-2" class="excercise" type="text" size="5" maxlength="5"> = <input id="variables-exc-1-3" class="excercise" type="text" size="2" maxlength="2">;
+        <script>
+          answers = [
+            ['int', 'myNum', '50'],
+            ['int', 'x', '5'],
+            ['int', 'z', 'z'],
+            ['int', ',', ',']
+          ]
+        </script>
+        <pre class="prettyprint lang-c" id="exc-1" style="padding-top: 12px;">
+          <input class="excercise" type="text" size="3" maxlength="3"> <input class="excercise" type="text" size="5" maxlength="5"> = <input class="excercise" type="text" size="2" maxlength="2">;
         </pre>
         <button
-          id="show-answer-button-1"
           class="show-answer-button"
           style="
             margin-top: -58px;
@@ -69,49 +71,41 @@
             padding-right: 25px;
             padding-left: 25px;
           "
-          onclick="show_answer_button_1_clicked();"
+          onclick="onShowAnswer('exc-1', answers)"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-1"
           class="submit-button"
-          onclick="submit_answer_button_1_clicked();"
-        >
+          onclick="onSubmitAnswer('exc-1', answers)">
           Submit Answer ❯
         </button>
-        <!-- EXC 2-->
-        <div id="exc-2"></div>
-        <hr />
+        <hr/>
         <h3>Άσκηση 2</h3>
         <p>
           Εμφανίστε το άθροισμα 5 + 10, χρησιμοποιώντας δύο μεταβλητές: x και y.
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-2"
-          style="padding: 10px; padding-bottom: 1px"
+          id="exc-2"
         >
+
         <input id="variables-exc-2" class="excercise" type="text" size="3" maxlength="3"> <input id="variables-exc-2-2" class="excercise" type="text" size="1" maxlength="1"> = <input id="variables-exc-2-3" class="excercise" type="text" size="1" maxlength="1">;
         int y = 10;
         printf("%d", (x+y));
         </pre>
         <button
-          id="show-answer-button-2"
           class="show-answer-button"
-          onclick="show_answer_button_2_clicked();"
+          onclick="onShowAnswer('exc-2', answers);"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-2"
           class="submit-button"
-          onclick="submit_answer_button_2_clicked();"
+          onclick="onSubmitAnswer('exc-2', answers);"
         >
           Submit Answer ❯
         </button>
-        <!-- EXC 3 -->
-        <div id="exc-3"></div>
         <hr />
         <h3>Άσκηση 3</h3>
         <p>
@@ -120,30 +114,26 @@
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-3"
-          style="padding: 10px; padding-bottom: 1px"
+          id="exc-3"
         >
+
         int x = 5;
         int y = 10;
-        <input id="variables-exc-3" class="excercise" type="text" size="3" maxlength="3"> <input id="variables-exc-3-2" class="excercise" type="text" size="1" maxlength="1"> = x + y;
-        printf("%d", <input id="variables-exc-3-3" class="excercise" type="text" size="1" maxlength="1">);
+        <input class="excercise" type="text" size="3" maxlength="3"> <input class="excercise" type="text" size="1" maxlength="1"> = x + y;
+        printf("%d", <input class="excercise" type="text" size="1" maxlength="1">);
        </pre>
         <button
-          id="show-answer-button-3"
           class="show-answer-button"
-          onclick="show_answer_button_3_clicked();"
+          onclick="onShowAnswer('exc-3', answers)"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-3"
           class="submit-button"
-          onclick="submit_answer_button_3_clicked();"
+          onclick="onSubmitAnswer('exc-3', answers)"
         >
           Submit Answer ❯
         </button>
-        <!-- EXC 4 -->
-        <div id="exc-4"></div>
         <hr />
         <h3>Άσκηση 4</h3>
         <p>
@@ -152,31 +142,24 @@
         </p>
         <pre
           class="prettyprint lang-c"
-          id="pre-exc-4"
-          style="padding: 10px; padding-bottom: 1px"
+          id="exc-4"
         >
-        <input id="variables-exc-4" class="excercise" type="text" size="3" maxlength="3"> x = 5<input id="variables-exc-4-2" class="excercise" type="text" size="1" maxlength="1"> y = 6<input id="variables-exc-4-3" class="excercise" type="text" size="1" maxlength="1"> z = 50;
+
+        <input class="excercise" type="text" size="3" maxlength="3"> x = 5<input class="excercise" type="text" size="1" maxlength="1"> y = 6<input class="excercise" type="text" size="1" maxlength="1"> z = 50;
         printf("%d", (x+y+z))
         </pre>
         <button
-          id="show-answer-button-4"
           class="show-answer-button"
-          onclick="show_answer_button_4_clicked();"
+          onclick="onShowAnswer('exc-4', answers)"
         >
           Show Answer
         </button>
         <button
-          id="submit-answer-button-4"
           class="submit-button"
-          onclick="submit_answer_button_4_clicked();"
+          onclick="onSubmitAnswer('exc-4', answers, 'c-user-input.html')"
         >
           Submit Answer ❯
         </button>
-        <hr />
-        <a class="previous-button" href="c-syntax.html"
-          ><span>Previous</span></a
-        >
-        <a class="next-button" href="c-user-input.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
@@ -206,6 +189,5 @@
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
     </footer>
-    <script src="../../scripts/c-variables.js"></script>
   </body>
 </html>

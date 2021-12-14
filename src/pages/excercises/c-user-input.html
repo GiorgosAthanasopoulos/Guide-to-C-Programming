@@ -11,7 +11,7 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=c&amp;skin=desert"></script>
-    <script src="../../scripts/c-user-input.js"></script>
+    <script src="../../scripts/exercises.js"></script>
     <div id="header-container">
       <a href="../../index.html"><img src="../../images/icon.png" /></a>
       <span id="navigation-menu">
@@ -41,6 +41,12 @@
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
       <div id="excercise-area">
+		<script>
+			var answers = [
+				['%d', '&d'],
+				['scanf', '&first', 'scanf', '&second', '%d']
+			];
+		</script>
         <h1>Ασκήσεις σε Είσοδο</h1>
         <hr />
         <p>
@@ -54,22 +60,20 @@
           Συμπληρώστε τα κενά έτσι ώστε το πρόγραμμα να διαβάζει την τιμή της
           μεταβλητής i απο το πληκτρολόγιο
         </p>
-        <pre class="prettyprint" id="pre-exc-1">
+        <pre class="prettyprint" id="exc-1">
 
           int i;
-          scanf("<input id="input-exc-1" class="excercise" type="text" size="2" maxlength="2">", <input id="input-exc-1-2" class="excercise" type="text" size="2" maxlength="2">);
+          scanf("<input class="excercise" type="text" size="2" maxlength="2">", <input class="excercise" type="text" size="2" maxlength="2">);
         </pre>
         <button
           class="show-answer-button"
-          id="show-answer-button-1"
-          onclick="show_answer_button_1_clicked();"
+		  onclick="onShowAnswer('exc-1', answers)"
         >
           Show Answer
         </button>
         <button
           class="submit-button"
-          id="submit-answer-button-1"
-          onclick="submit_answer_button_1_clicked()"
+		  onclick="onSubmitAnswer('exc-1', answers)"
         >
           Submit Answer ❯
         </button>
@@ -80,27 +84,25 @@
           πληκτρολόγιο τις τιμές των μεταβλητών x και y και να εμφανίζει το
           άθροισμά τους
         </p>
-        <pre class="prettyprint" id="pre-exc-2">
+        <pre class="prettyprint" id="exc-2">
 
           int first, second;
           printf("Enter the first number: ");
-          <input id="input-exc-2-1" class="excercise" type="text" size="5" maxlength="5">("%d", <input id="input-exc-2-2" class="excercise" type="text" size="6" maxlength="6">);
+          <input class="excercise" type="text" size="5" maxlength="5">("%d", <input class="excercise" type="text" size="6" maxlength="6">);
           printf("Enter the second number: ", );
-          <input id="input-exc-2-3" class="excercise" type="text" size="5" maxlength="5">("%d", <input id="input-exc-2-4" class="excercise" type="text" size="7" maxlength="7">);
-          printf("Sum = <input id="input-exc-2-5" class="exercise" type="text" size="2" maxlength="2">", first + second);
+          <input class="excercise" type="text" size="5" maxlength="5">("%d", <input class="excercise" type="text" size="7" maxlength="7">);
+          printf("Sum = <input class="exercise" type="text" size="2" maxlength="2">", first + second);
 
         </pre>
         <button
           class="show-answer-button"
-          id="show-answer-button-2"
-          onclick="show_answer_button_2_clicked();"
+		  onclick="onShowAnswer('exc-2', answers)"
         >
           Show Answer
         </button>
         <button
           class="submit-button"
-          id="submit-answer-button-2"
-          onclick="submit_answer_button_2_clicked()"
+		  onclick="onSubmitAnswer('exc-2', answers, 'c-data-types.html')"
         >
           Submit Answer ❯
         </button>
