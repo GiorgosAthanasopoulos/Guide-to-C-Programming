@@ -72,7 +72,7 @@ h1 h2 h3 h4 h5 h6 {
   color: white;
   font-family: "Segoe UI";
   text-align: justify;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
   display: table-cell;
 }
 
@@ -167,5 +167,77 @@ a {
 }
 
 .current-page {
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.previous-button,
+.next-button {
+  background-color: white;
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  transition: ease-in 0.1s;
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.next-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.previous-button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.next-button:hover span {
+  padding-right: 25px;
 }
