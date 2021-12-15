@@ -26,7 +26,9 @@
       <div id="excercise-sidebar">
         <h2>C Ασκήσεις</h2>
         <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
-        <a class="current-page" href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
+        <a class="current-page" href="c-variables.html"
+          >Ασκήσεις σε Μεταβλητές</a
+        >
         <a href="c-user-input.html">Ασκήσεις σε Είσοδο</a>
         <a href="c-data-types.html">Ασκήσεις σε Τύπους Δεδομένων</a>
         <a href="c-operators.html">Ασκήσεις σε Τελεστές</a>
@@ -53,13 +55,13 @@
         </p>
         <script>
           answers = [
-            ['int', 'myNum', '50'],
-            ['int', 'x', '5'],
-            ['int', 'z', 'z'],
-            ['int', ',', ',']
+            ["int", "myNum", "50"],
+            ["int", "x", "5"],
+            ["int", "z", "z"],
+            ["int", ",", ","],
           ]
         </script>
-        <pre class="prettyprint lang-c" id="exc-1" style="padding-top: 12px;">
+        <pre class="prettyprint lang-c" id="exc-1" style="padding-top: 12px">
           <input class="excercise" type="text" size="3" maxlength="3"> <input class="excercise" type="text" size="5" maxlength="5"> = <input class="excercise" type="text" size="2" maxlength="2">;
         </pre>
         <button
@@ -77,18 +79,16 @@
         </button>
         <button
           class="submit-button"
-          onclick="onSubmitAnswer('exc-1', answers)">
+          onclick="onSubmitAnswer('exc-1', answers)"
+        >
           Submit Answer ❯
         </button>
-        <hr/>
+        <hr />
         <h3>Άσκηση 2</h3>
         <p>
           Εμφανίστε το άθροισμα 5 + 10, χρησιμοποιώντας δύο μεταβλητές: x και y.
         </p>
-        <pre
-          class="prettyprint lang-c"
-          id="exc-2"
-        >
+        <pre class="prettyprint lang-c" id="exc-2">
 
         <input id="variables-exc-2" class="excercise" type="text" size="3" maxlength="3"> <input id="variables-exc-2-2" class="excercise" type="text" size="1" maxlength="1"> = <input id="variables-exc-2-3" class="excercise" type="text" size="1" maxlength="1">;
         int y = 10;
@@ -112,10 +112,7 @@
           Δημιουργήστε μια μεταβλητή που ονομάζεται z, αντιστοιχίστε x + y σε
           αυτήν και εμφανίστε το αποτέλεσμα.
         </p>
-        <pre
-          class="prettyprint lang-c"
-          id="exc-3"
-        >
+        <pre class="prettyprint lang-c" id="exc-3">
 
         int x = 5;
         int y = 10;
@@ -140,10 +137,7 @@
           Συμπληρώστε τα μέρη που λείπουν για να δημιουργήσετε τρεις μεταβλητές
           του ίδιου τύπου, χρησιμοποιώντας μια λίστα διαχωρισμένη με κόμματα:
         </p>
-        <pre
-          class="prettyprint lang-c"
-          id="exc-4"
-        >
+        <pre class="prettyprint lang-c" id="exc-4">
 
         <input class="excercise" type="text" size="3" maxlength="3"> x = 5<input class="excercise" type="text" size="1" maxlength="1"> y = 6<input class="excercise" type="text" size="1" maxlength="1"> z = 50;
         printf("%d", (x+y+z))
@@ -160,6 +154,11 @@
         >
           Submit Answer ❯
         </button>
+        <hr />
+        <a class="previous-button" href="c-syntax.html"
+          ><span>Previous</span></a
+        >
+        <a class="next-button" href="c-user-input.html"><span>Next</span></a>
       </div>
     </div>
     <footer>
