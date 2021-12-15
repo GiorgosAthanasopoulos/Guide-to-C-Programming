@@ -1,142 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../styles/index.css" />
-    <link rel="stylesheet" href="../../../styles/lessons.css" />
-    <title>C Είσοδος</title>
-  </head>
-  <body onload="PR.prettyPrint()">
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
-    <div id="header-container">
-      <a href="../../../index.html"><img src="../../../images/icon.png" /></a>
-      <span id="navigation-menu">
-        <a href="../../../index.html"> Αρχική </a>
-        <a class="active" href="../../lessons.html"> Μαθήματα </a>
-        <a href="../../references.html"> Πηγές </a>
-        <a href="../../exercises.html"> Ασκήσεις Εξάσκησης </a>
-        <a href="../../contact.html"> Επικοινωνία </a>
-      </span>
-    </div>
-    <div id="lesson-wrapper">
-      <div id="lesson-sidebar">
-        <h2>C Μαθήματα</h2>
-        <a href="../../lessons.html">C Αρχική</a>
-        <a href="../../lessons/tutorial/c-intro.html">C Εισαγωγή</a>
-        <a href="../../lessons/tutorial/c-get-started.html">C Ξεκινώντας...</a>
-        <a href="../../lessons/tutorial/c-syntax.html">C Σύνταξη</a>
-        <a href="../../lessons/tutorial/c-output.html">C ΈΞοδος</a>
-        <a href="../../lessons/tutorial/c-comments.html">C Σχόλια</a>
-        <a href="../../lessons/tutorial/c-variables.html">C Μεταβλητές</a>
-        <a class="current-page" href="../../lessons/tutorial/c-user-input.html">C Είσοδος</a>
-        <a href="../../lessons/tutorial/c-data-types.html">C Τύποι Δεδομένων</a>
-        <a href="../../lessons/tutorial/c-operators.html">C Τελεστές</a>
-        <a href="../../lessons/tutorial/c-strings.html">C Συμβολοσειρά</a>
-        <a href="../../lessons/tutorial/c-math.html">C Μαθηματικά</a>
-        <a href="../../lessons/tutorial/c-booleans.html">C Λογικές Τιμές</a>
-        <a href="../../lessons/tutorial/c-conditions.html">C Συνθήκες</a>
-        <a href="../../lessons/tutorial/c-switch.html">C Switch</a>
-        <a href="../../lessons/tutorial/c-while-loop.html">C While Loop</a>
-        <a href="../../lessons/tutorial/c-for-loop.html">C For Loop</a>
-        <a href="../../lessons/tutorial/c-break-continue.html"
-          >C Break/Continue</a
-        >
-        <a href="../../lessons/tutorial/c-arrays.html">C Πίνακες</a>
-        <a href="../../lessons/tutorial/c-pointers.html">C Δείκτες</a>
-        <h2>C Συναρτήσεις</h2>
-        <a href="../../lessons/functions/c-functions.html">C Συναρτήσεις</a>
-        <a href="../../lessons/functions/c-function-parameters.html"
-          >C Παράμετροι σε Συναρτήσεις</a
-        >
-        <h2>C Δομές</h2>
-        <a href="../../lessons/structures/c-structs.html"
-          >C Δημιουργώντας και χρησιμοποιώντας δομές(structs)</a
-        >
-        <a href="../../lessons/structures/c-structs2.html"
-          >C Δείκτες για δομές, δομές ως ορίσματα σε Συναρτήσεις</a
-        >
-      </div>
-      <div id="lesson-area">
-        <h1> Είσοδος (Input) </h1>
-        <hr>
-        <p>
-          Όπως έχουμε δει, μπορούμε να χρησιμοποιήσουμε την συνάρτηση printf ώστε να εμφανίσουμε
-          μηνύματα στην οθόνη του χρήστη. Τέτοια μηνήματα μπορεί να είναι π.χ. το αποτέλεσμα ενός
-          πολύπλοκου υπολογισμού. Το πρόβλημα είναι όμως οτι αν οι παράμετροι ενός προγράμματος δεν
-          μεταβάλλονται απο τον χρήστη, θα αποτελείται κάθε φορά ο ίδιος υπολογισμός και θα εμφανίζεται
-          κάθε φορά το ίδιο αποτέλεσμα, γεγονός που καθιστά το εν λόγω πρόγραμμα όχι ιδιαιτέρως χρήσιμο.
-          Μπορούμε όμως να χρησιμοποιήσουμε μία απο τις συναρτήσης εισόδου της C, για να λάβουμε κάποια
-          τιμή που θα πληκτρολογήσει ο χρήστης κατα την εκτέλεση του προγράμματος. Μία απο αυτές τις
-          συναρτήσεις είναι η <b>scanf</b>. Η scanf σταματάει το πρόγραμμα μέχρι ο χρήστης να πληκτρολογήσει
-          κάτι και να πατήσει enter, και έπειτα συνεχίζει την εκτέλεση κανονικά.
-        </p>
-        <pre class="prettyprint">#include &lt;stdio.h&gt;
-
-int main(void)
-{
-  int i;
-  char c;
-  scanf("%d %c", &i, &c);
-  printf("%c %d", c, i);
-
-  return 0;
-}</pre>
-      <p>
-        Αν κατα την εκτέλεση του παραπάνω προγράμματος ο χρήστης πληκτρολογήσει 1 c τότε θα εκτυπώσουμε c 1 στην οθόνη.
-        Μην ανησυχήσεις αν κάποια πράγματα φαίνονται Κινέζικα, θα τα αναλύσουμε τώρα. Αρχικά, όπως η printf σημαίνει print format,
-        η scanf σημαίνει scan format, δηλαδή περνάμε ως πρώτη παράμετρο το format, δηλαδή το τι θα διαβάσει απτο πληκτρολόγιο το πρόγραμμα
-        (δηλαδή αν θα διαβάσει αριθμό, χαρακτήρα κτλ), και έπειτα περνάμε ως παραμέτρους τις μεταβλητές που αντιστοιχόυν στο format. Πιο απλά,
-        γράφοντας %d στην πρώτη θέση σημαίνει οτι η πρώτη παράμετρος που θα περάσουμε μετά το format θα είναι τύπου int, γράφοντας %c στην δεύτερη θέση σημαίνει οτι 
-        η δεύτερη παράμετρος που θα περάσουμε μετα το format θα είναι τύπου char κ.ο.κ.
-      </p>
-      <hr>
-      <p>
-        Γιατί όμως γράφουμε &i αντί για i σκέτο; Η διαφορά αυτή είναι πολύ σημαντική, όμως δεν πρόκειται να το αναλύσουμε απο τώρα καθώς και είναι
-        πιο προχωρημένο θέμα. Προς το παρόν, θα γράφετε &i και &c στις παραμέτρους, ακόμη και αν δεν το καταλαβαίνετε, γιατί ειδάλλως η συνάρτηση
-        μπορεί να οδηγήσει στην ανώμαλη εξόδο του προγράμματος.
-      </p>
-      <hr>
-      <h2>Άλλες συναρτήσεις εισόδου</h2>
-      <p> 
-        Εντός του αρχείο stdio.h υπάρχουν δηλωμένες και άλλες συναρτήσεις για είσοδο που επιτελούν αμυδρώς διαφορετικές λειτουργείες. 
-        Αρχικά, για πολλούς λόγους η συνάρτηση scanf δεν θεωρείται ασφαλής και πρέπει να αποφεύγεται η χρήση της, όμως υπάρχει μία
-        ανάλογη, η scanf_s (scan format safe), που μπορούμε να χρησιμοποιήσουμε. Άλλες συναρτήσεις είναι η fgets, fscanf, fgetc, κτλ.
-      </p>
-      <hr>
-      <a class="previous-button" href="c-variables.html"><span>Previous</span></a>
-      <a class="next-button" href="c-data-types.html"><span>Next</span></a>
-      </div>
-    </div>
-    <footer>
-      <table>
-        <tr>
-          <th>Υπηρεσίες</th>
-          <th>Σχετικά με εμάς</th>
-          <th>Ιστοσελίδα</th>
-        </tr>
-        <tr>
-          <td><a href="../../lessons.html">Μαθήματα</a></td>
-          <td><a href="../../contact.html">Ομάδα</a></td>
-          <td>
-            <a
-              href="https://github.com/giorgos-athanassopoulos/Guide-to-C-Programming/"
-              >GitHub</a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td><a href="https://www.aueb.gr">Πανεπιστήμιο</a></td>
-        </tr>
-      </table>
-      <h5>&copy; Athens University of Economics and Business</h5>
-    </footer>
-  </body>
-</html>
-=======
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -292,11 +153,12 @@ int main(void)
         </tr>
         <tr>
           <td><a href="../../exercises.html">Ασκήσεις</a></td>
-          <td><a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a></td>
+          <td>
+            <a href="https://www.aueb.gr" target="_blank">Πανεπιστήμιο</a>
+          </td>
         </tr>
       </table>
       <h5>&copy; Athens University of Economics and Business</h5>
     </footer>
   </body>
 </html>
->>>>>>> development
