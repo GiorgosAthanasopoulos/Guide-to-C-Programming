@@ -1,0 +1,326 @@
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+#excercise-wrapper {
+<<<<<<< HEAD
+  /*height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 0px 1px 0.3vw black inset;*/
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 0px 1px 0.3vw black inset;
+  display: grid;
+  grid-template-areas:
+    "menu main main main main main"
+    "menu main main main main main";
+=======
+  width: 100%;
+  margin: 0;
+  box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.95);
+  display: table;
+>>>>>>> development
+  background-image: url(../images/references/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+<<<<<<< HEAD
+#excercise-sidebar {
+  /*width: 230px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: lightgray;
+  float: left;
+  height: 100%;
+  box-shadow: 0px 0px 0.3vw black;*/
+  padding-bottom: 20px;
+  padding-top: 5px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: lightgray;
+  box-shadow: 0px 0px 0.3vw black;
+  max-width: fit-content;
+  grid-area: menu;
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 1px 0px 0px white;
+  background-size: cover;
+  min-width: 230px;
+  color: white;
+}
+
+#excercise-area {
+  /*float: left;
+  overflow: hidden;*/
+  color: black;
+  background-color: white;
+  grid-area: main;
+  padding: 50px;
+  background-color: rgba(10, 10, 10, 0.95);
+=======
+@media only screen and (max-width: 600px) {
+  #excercise-sidebar {
+    visibility: hidden;
+    position: fixed;
+  }
+}
+
+.submit-button {
+  background-color: #059862;
+
+  color: ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+
+  padding: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.show-answer-button {
+  float: right;
+  text-align: left;
+  background-color: #282a35;
+
+  color: #ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+
+  margin-top: -70px;
+  margin-right: 10px;
+  padding: 10px;
+
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#excercise-sidebar {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: lightgray;
+  box-shadow: 0px 0px 0.3vw black;
+  background-color: rgba(0, 0, 0, 0.95);
+  background-size: cover;
+  color: white;
+  width: 16%;
+  display: table-cell;
+}
+
+#excercise-area {
+  color: black;
+  background-color: white;
+  padding: 50px;
+>>>>>>> development
+  box-shadow: -4px 3px 8px black inset;
+  color: white;
+  font-family: "Segoe UI";
+  text-align: justify;
+<<<<<<< HEAD
+=======
+  background-color: rgba(0, 0, 0, 0);
+  display: table-cell;
+>>>>>>> development
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #222;
+}
+
+#excercise-sidebar a {
+<<<<<<< HEAD
+  /*display: flex;
+  text-decoration: none;
+  padding: 3px 3px 3px 15px;
+  text-align: center;
+  color: black;*/
+  display: flex;
+  text-decoration: none;
+  padding: 3px 3px 3px 15px;
+=======
+  display: block;
+  text-decoration: none;
+  padding: 3px 2px 4px 15px;
+>>>>>>> development
+  color: white;
+  text-align: left;
+  transition: ease-in 10ms;
+}
+
+#excercise-sidebar a:hover {
+<<<<<<< HEAD
+  background-color: rga(255, 255, 255, 0.267);
+}
+
+#excercise-sidebar h2 {
+  /*margin-top: 0;
+=======
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+#excercise-sidebar h2 {
+  margin-top: 0;
+>>>>>>> development
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  padding-top: 10px;
+<<<<<<< HEAD
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);*/
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+  padding-top: 10px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+=======
+  border-bottom: 1px solid rgb(255, 255, 255, 0.15);
+}
+
+.submit-button {
+  background-color: #059862;
+
+  color: ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.submit-button:hover {
+  background-color: #05794e;
+}
+
+.show-answer-button {
+  float: right;
+  text-align: left;
+  background-color: #282a35;
+  cursor: pointer;
+  color: #ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+
+  margin-top: -70px;
+  margin-right: 10px;
+  padding: 10px;
+
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.show-answer-button:hover {
+  background-color: #1e1f27;
+}
+
+input {
+  font-family: Courier;
+}
+
+pre {
+  border-radius: 8px;
+}
+
+#pre-exc-1 {
+  padding-bottom: 10px;
+}
+
+#pre-exc-3 {
+  background-color: #333333;
+  padding: 10px;
+  font-size: 12px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.current-page {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.previous-button,
+.next-button {
+  background-color: white;
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  transition: ease-in 0.1s;
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.next-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.previous-button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.next-button:hover span {
+  padding-right: 25px;
+>>>>>>> development
+}
