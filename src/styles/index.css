@@ -148,10 +148,6 @@ body {
   text-align: justify;
 }
 
-#should-learn h2 {
-  /* text-align: right; */
-}
-
 footer {
   background-color: #282d32;
   text-align: center;
@@ -208,4 +204,377 @@ footer h5 {
   position: absolute;
   margin-top: 170px;
   padding-bottom: 10px;
+}
+
+/* lessons.css */
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+#lesson-wrapper {
+  width: 100%;
+  margin: 0;
+  box-shadow: 0px 1px 0.3vw black inset;
+  background-image: url(../images/references/background.jpg);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.95);
+  display: table;
+}
+
+@media only screen and (max-width: 600px) {
+  #lesson-sidebar {
+    visibility: hidden;
+    position: fixed;
+  }
+}
+
+pre {
+  border-radius: 10px;
+}
+
+#lesson-sidebar {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: lightgray;
+  box-shadow: 0px 0px 0.3vw black;
+  background-color: black;
+  background-size: cover;
+  color: white;
+  margin-right: 50px;
+  top: 0;
+  display: table-cell;
+  width: 16%;
+}
+
+#lesson-area {
+  color: black;
+  background-color: white;
+  padding: 50px;
+  box-shadow: -4px 3px 8px black inset;
+  color: white;
+  font-family: "Segoe UI";
+  text-align: justify;
+  background-color: rgb(0, 0, 0, 0);
+  display: table-cell;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #222;
+}
+
+#lesson-sidebar a {
+  text-decoration: none;
+  padding: 3px 3px 3px 15px;
+  color: white;
+  text-align: left;
+  transition: ease-in 10ms;
+  display: block;
+}
+
+#lesson-sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+#lesson-sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.15);
+}
+
+.previous-button,
+.next-button {
+  background-color: white;
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  transition: ease-in 0.1s;
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.next-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.previous-button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.previous-button span,
+.next-button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.next-button:hover span {
+  padding-right: 25px;
+}
+
+.current-page {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#lesson-area table {
+  background-color: rgb(20, 20, 20);
+  border-color: rgba(54, 54, 54, 0.95);
+  border-style: solid;
+}
+
+#lesson-area table tr:nth-child(even) {
+  background-color: rgb(30, 30, 30);
+}
+
+#lesson-area th {
+  padding: 10px;
+}
+
+#lesson-area td {
+  padding: 5px;
+}
+
+/* exercises.css */
+
+.submit-button {
+  background-color: #059862;
+
+  color: ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  display: inline-block;
+
+  padding: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.show-answer-button {
+  float: right;
+  text-align: left;
+  background-color: #282a35;
+
+  color: #ffffe5;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+
+  margin-top: -70px;
+  margin-right: 10px;
+  padding: 10px;
+
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+input {
+  font-family: Courier;
+}
+
+.show-answer-button:hover {
+  background-color: #1e1f27;
+}
+
+.submit-button:hover {
+  background-color: #05794e;
+}
+
+/* refrences.css */
+
+#references-container {
+  box-shadow: 0px 0.3vw 8px black inset;
+  padding: 20vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+  text-align: justify;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-image: url(../images/references/background.jpg);
+  background-size: cover;
+}
+
+#references-container a {
+  text-shadow: 0px 0px 0px;
+  color: gray;
+  text-decoration: none;
+  transition: ease-in 0.2s;
+  text-shadow: 0px 0px 4.5px gray;
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#references-container a:hover {
+  font-size: 18.3px;
+  color: lightgray;
+  text-shadow: 0px 0px 4.5px lightgray;
+}
+
+#references-container a:active {
+  color: darkgray;
+  text-shadow: 0px 0px 4.5px darkgray;
+}
+
+#references-box {
+  padding: 37.5px;
+  background-color: rgb(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.9);
+}
+
+#references-box h2 {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#references-container p {
+  --mrg: 30px;
+  margin-bottom: var(--mrg);
+  margin-top: var(--mrg);
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#references-container iframe {
+  box-shadow: 0px 0px 8px black;
+  display: flex;
+  margin: auto;
+  max-width: 80%;
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* contact.css */
+
+.person-info {
+  text-align: left;
+  height: fit-content;
+  min-height: 225px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 37.5px;
+  background-color: rgb(0, 0, 0, 0.9);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.9);
+}
+
+.person-info h2 {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#info-container {
+  box-shadow: 0px 4.5px 8px black inset;
+  min-width: 300px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+  text-align: justify;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-image: url(../images/references/background.jpg);
+  background-size: cover;
+}
+
+#info-container img {
+  width: 150px;
+  border-radius: 150px;
+  float: left;
+  margin-right: 30px;
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#info-container p {
+  text-align: left;
+}
+
+#info-container p {
+  --mrg: 30px;
+  margin-bottom: var(--mrg);
+  margin-top: var(--mrg);
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#info-container a {
+  text-shadow: 0px 0px 0px;
+  color: gray;
+  text-decoration: none;
+  transition: ease-in 0.2s;
+  text-shadow: 0px 0px 4.5px gray;
+  animation: fade-in-animation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#info-container a:hover {
+  font-size: 18.3px;
+  color: lightgray;
+  text-shadow: 0px 0px 4.5px lightgray;
+}
+
+#info-container a:active {
+  color: darkgray;
+  text-shadow: 0px 0px 4.5px darkgray;
 }

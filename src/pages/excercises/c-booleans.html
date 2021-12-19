@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ασκήσεις σε Λογικές Τιμές</title>
     <link rel="stylesheet" href="../../styles/index.css" />
-    <link rel="stylesheet" href="../../styles/exercises.css" />
     <link rel="shortcut icon" type="image/png" href="../../images/icon.png" />
   </head>
   <body>
@@ -22,8 +21,8 @@
         <a href="../contact.html"> Επικοινωνία </a>
       </span>
     </div>
-    <div id="excercise-wrapper">
-      <div id="excercise-sidebar">
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
         <h2>Ασκήσεις</h2>
         <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
         <a href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
@@ -42,7 +41,7 @@
         <a href="c-functions.html">Ασκήσεις σε Συναρτήσεις</a>
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
-      <div id="excercise-area">
+      <div id="lesson-area">
         <h2>Ασκήσεις σε Λογικές Τιμές</h2>
         <hr />
         <h3>Άσκηση 1</h3>
@@ -57,10 +56,13 @@
           ]
         </script>
         <pre class="prettyprint lang-c" id="exc-1">
-          <input class="exercise" type="text" size="4" maxlength="4"> isCodingFun = true;
-          <input class="excercise" type="text" size="4" maxlength="4"> isFishTasty = false;
-          printf("%d", <input class="excercise" type="text" size="11" maxlength="11">);
-          printf("%d", <input class="exercise" type="text" size="11" maxlength="11">);
+
+  #include &lt;stdbool.h&gt;
+
+  <input class="exercise" type="text" size="4" maxlength="4"> isCodingFun = true;
+  <input class="excercise" type="text" size="4" maxlength="4"> isFishTasty = false;
+  printf("%d", <input class="excercise" type="text" size="11" maxlength="11">);
+  printf("%d", <input class="exercise" type="text" size="11" maxlength="11">);
         </pre>
         <button
           class="show-answer-button"
@@ -79,7 +81,7 @@
         <hr />
         <h3>Άσκηση 2</h3>
         <p>
-          Συμπληρώστε τα μέρη που λείπουν για να εκτυπώσετε την τιμή true (για
+          Συμπληρώστε τα μέρη που λείπουν για να εκτυπώσετε την τιμή 1 (για
           true):
         </p>
         <pre class="prettyprint lang-c" id="exc-2">

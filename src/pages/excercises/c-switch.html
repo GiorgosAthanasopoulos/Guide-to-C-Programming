@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ασκήσεις σε Switch</title>
     <link rel="stylesheet" href="../../styles/index.css" />
-    <link rel="stylesheet" href="../../styles/exercises.css" />
     <link rel="shortcut icon" type="image/png" href="../../images/icon.png" />
   </head>
   <body>
@@ -22,8 +21,8 @@
         <a href="../contact.html"> Επικοινωνία </a>
       </span>
     </div>
-    <div id="excercise-wrapper">
-      <div id="excercise-sidebar">
+    <div id="lesson-wrapper">
+      <div id="lesson-sidebar">
         <h2>Ασκήσεις</h2>
         <a href="c-syntax.html">Ασκήσεις σε Σύνταξη</a>
         <a href="c-variables.html">Ασκήσεις σε Μεταβλητές</a>
@@ -40,7 +39,7 @@
         <a href="c-functions.html">Ασκήσεις σε Συναρτήσεις</a>
         <a href="c-structs.html">Ασκήσεις σε Δομές</a>
       </div>
-      <div id="excercise-area">
+      <div id="lesson-area">
         <h2>Ασκήσεις σε Switch</h2>
         <hr />
         <h3>Άσκηση 1</h3>
@@ -55,15 +54,16 @@
           ]
         </script>
         <pre class="prettyprint lang-c" id="exc-1">
-          int day = 2;
-          switch(<input class="excercise" type="text" size="3" maxlength="3">){
-            <input class="excercise" type="text" size="4" maxlength="4"> 1:
-              printf("%s", "Saturday");
-              break;
-            <input class="excercise" type="text" size="4" maxlength="4"> 2:
-              printf("%s", "Sunday");
-              <input class="excercise" type="text" size="5" maxlength="5">;
-          }
+
+  int day = 2;
+  switch(<input class="excercise" type="text" size="3" maxlength="3">){
+    <input class="excercise" type="text" size="4" maxlength="4"> 1:
+      printf("%s", "Saturday");
+      break;
+    <input class="excercise" type="text" size="4" maxlength="4"> 2:
+      printf("%s", "Sunday");
+      <input class="excercise" type="text" size="5" maxlength="5">;
+  }
         </pre>
         <button
           class="show-answer-button"
@@ -87,17 +87,18 @@
           υπάρχει αντιστοίχιση πεζών-κεφαλαίων στη δήλωση switch.
         </p>
         <pre id="exc-2" class="prettyprint lang-c">
-          int day = 4;
-          switch(<input class="exercise" type="text" size="3" maxlength="3">){
-            <input class="exercise" type="text" size="4" maxlength="4"> 1:
-              printf("%s", "Saturday");
-              break;
-            <input class="exercise" type="text" size="4" maxlength="4"> 2:
-              printf("%s", "Sunday");
-              <input class="exercise" type="text" size="5" maxlength="5">;
-            <input class="exercise" type="text" size="7" maxlength="7">:
-              printf("%s", "Weekend");
-          }
+          
+  int day = 4;
+  switch(<input class="exercise" type="text" size="3" maxlength="3">){
+    <input class="exercise" type="text" size="4" maxlength="4"> 1:
+      printf("%s", "Saturday");
+      break;
+    <input class="exercise" type="text" size="4" maxlength="4"> 2:
+      printf("%s", "Sunday");
+      <input class="exercise" type="text" size="5" maxlength="5">;
+    <input class="exercise" type="text" size="7" maxlength="7">:
+      printf("%s", "Weekend");
+  }
         </pre>
         <button
           class="show-answer-button"
